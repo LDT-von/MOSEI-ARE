@@ -47,6 +47,19 @@ def sha256(path):
     return h.hexdigest()
 
 
+def installed_versions():
+    versions = {name: importlib.metadata.version(name)
+                for name in ["torch", "torchaudio", "torchvision", "transformers",
+                             "av", "numpy", "Pillow"]}
+    versions["opencv_runtime"] = cv2.__version__
+    for name in ["opencv-python", "opencv-contrib-python", "opencv-python-headless"]:
+        try:
+            versions[name] = importlib.metadata.version(name)
+        except importlib.metadata.PackageNotFoundError:
+            pass
+    return versions
+
+
 def number_words(n):
     ones = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()
     tens = "zero ten twenty thirty forty fifty sixty seventy eighty ninety".split()
@@ -422,7 +435,7 @@ def run(args):
     with (out / "summary_100.csv").open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(summary[0]))
         writer.writeheader(); writer.writerows(summary)
-    versions = {p: importlib.metadata.version(p) for p in ["torch", "torchaudio", "torchvision", "transformers", "av", "numpy", "opencv-python", "Pillow"]}
+    versions = installed_versions()
     save_json(out / "run_manifest.json", {
         "sample_count": len(summary), "full_expected_count": 100, "device": device,
         "versions": versions, "ffmpeg_libraries": av.library_versions,
@@ -432,7 +445,10 @@ def run(args):
         "audio_window_seconds": .04, "audio_hop_seconds": .02, "audio_names": AUDIO_NAMES,
         "text_window_tokens": 126, "text_stride_tokens": 96, "ctc_review_threshold": .5,
         "ctc_review_threshold_meaning": "predefined diagnostic only, not calibrated correctness probability",
-        "source_label_sha256": data["source_label_sha256"], "pipeline_sha256": sha256(__file__),
+        "source_label_sha256": data["source_label_sha256"],
+        "pipeline_sha256": code_hash,
+        "feature_extraction_pipeline_sha256": code_hash,
+        "repository_pipeline_sha256": code_hash,
         "pretrained_weight_sha256": {p.name: sha256(p) for p in (base / "assets").rglob("*.pth")},
         "no_sentiment_training": True,
     })

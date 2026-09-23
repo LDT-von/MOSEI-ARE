@@ -38,18 +38,19 @@ with np.load(path, allow_pickle=False) as d:
 ```text
 python inventory.py --workspace <题目工作目录>
 python prepare_models.py
-python pipeline.py --workspace <题目工作目录> --resume
+python pipeline.py --workspace <题目工作目录>
 python apply_quality_gate.py
 python verify_outputs.py
 python audit_media.py
-python audit_transcripts.py
 python test_alignment.py
 python load_features.py
 python build_report.py
 python package_results.py
 ```
 
-`prepare_models.py` 只下载公开预训练权重，不下载额外情感数据集。语音和视觉权重保存至assets，文本模型使用Hugging Face缓存。额外诊断脚本需要本地 `openai/whisper-small`，修订为 `973afd24965f72e36ca33b3055d56a652f456b4d`；如无缓存，可用 `huggingface_hub.snapshot_download` 获取该修订。四条诊断输出已包含在交付包中；它不影响主提取和质量筛查。
+`prepare_models.py` 只下载公开预训练权重，不下载额外情感数据集。语音和视觉权重保存至assets，文本模型使用Hugging Face缓存。`audit_transcripts.py` 是可选的独立语音诊断，另需本地 `openai/whisper-small`，修订为 `973afd24965f72e36ca33b3055d56a652f456b4d`；如无缓存，可用 `huggingface_hub.snapshot_download` 获取该修订后再运行。四条原运行诊断输出已包含在本地交付包中；在新副本里要重现这份诊断文件，需在打包前补跑该脚本。它不影响主提取和质量筛查。
+
+本地工作目录现已生成完整100份特征；只需核验现有结果时运行 `python verify_outputs.py`，无需重复提取。从头复现实验请在新的项目副本中执行上面的命令，避免覆盖当前交付结果。提取中断后、且 `pipeline.py` 内容未变时，可以在同一副本追加 `--resume`；脚本会核对源码和特征哈希，源码变化时会重新提取。
 
 原视频和标签不做回写。`--limit` 仅用于调试，样本数不足100时最终验证会拒绝通过。全部规则与参数固定在脚本和运行清单，未利用情感标签选择阈值。
 

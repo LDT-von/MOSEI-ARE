@@ -10,6 +10,15 @@ import numpy as np
 BASE = Path(__file__).resolve().parent
 OUT = BASE / 'outputs'
 
+def opencv_distribution_versions():
+    versions = {}
+    for name in ['opencv-python', 'opencv-contrib-python', 'opencv-python-headless']:
+        try:
+            versions[name] = importlib.metadata.version(name)
+        except importlib.metadata.PackageNotFoundError:
+            pass
+    return versions
+
 def replace_block(chapter, start, end, lines):
     assert start in chapter and end in chapter
     left, rest = chapter.split(start, 1)
@@ -66,8 +75,7 @@ def main():
     environment = {
         'python': platform.python_version(),
         'imported_opencv_runtime': cv2.__version__,
-        'installed_opencv_distributions': {name: importlib.metadata.version(name)
-                                           for name in ['opencv-python', 'opencv-contrib-python', 'opencv-python-headless']},
+        'installed_opencv_distributions': opencv_distribution_versions(),
         'opencv_note': 'The source environment has overlapping OpenCV distributions; reproduction requirements select one matching the imported cv2 runtime.',
         'recorded_package_versions': run['versions'],
     }

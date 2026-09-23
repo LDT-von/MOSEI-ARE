@@ -127,6 +127,6 @@
     }
   ],
   "feature_extraction_pipeline_sha256": "2709b60ab8e48da15790b936941b0dc787c7e6b870267ca275d7b8f649897014",
-  "repository_pipeline_sha256": "9275b92ba7184bd647c8491ab1f2e33cc1b1572a6e70fc9b9acada777f45cc82",
-  "path_only_relocation_note": "After extraction, the default workspace root was adjusted to the new repository layout. Feature extraction logic and existing output files were not changed."
+  "repository_pipeline_sha256": "63c1ed64dc48051777c0a0840d4e98ba19331859439c12e2a1b6377c332af879",
+  "path_only_relocation_note": "After extraction, the default workspace root and run-manifest reporting were adjusted. The feature extraction calculations and saved per-sample features were not changed."
 }
