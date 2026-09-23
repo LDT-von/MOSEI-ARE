@@ -24,6 +24,7 @@ data/attachments/
 **/*.download
 **/*.partial
 *.zip
+docs/papers/*.pdf
 **/outputs/extraction.log
 **/outputs/asr_audit.log
 **/qa/

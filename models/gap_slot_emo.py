@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import torch
 from torch import nn
-from torch.nn import functional as F
 
 
 class TextTokenEncoder(nn.Module):
@@ -151,11 +150,13 @@ class GapSlotEmo(nn.Module):
         self.vision_project = nn.Sequential(nn.Linear(35, dim), nn.LayerNorm(dim), nn.GELU())
         self.time_position = nn.Embedding(max_len, dim)
         self.modalities = nn.ModuleList(MaskedSlotAttention(dim, slots, slot_heads, slot_iterations) for _ in range(3))
-        self.repair = AlignedGapRepair(dim) if use_gap_repair else None
         self.modality_score = nn.Sequential(nn.Linear(dim + 1, dim // 2), nn.GELU(), nn.Linear(dim // 2, 1))
         self.fusion = nn.Sequential(nn.Linear(dim * 4, dim * 2), nn.GELU(), nn.Dropout(dropout), nn.Linear(dim * 2, dim))
         self.classifier = nn.Linear(dim, 3)
         self.regressor = nn.Linear(dim, 1)
+        # Create the optional branch last so shared A/B/C weights start identically
+        # under the same seed; the extra module must not shift shared initialization.
+        self.repair = AlignedGapRepair(dim) if use_gap_repair else None
 
     def forward(
         self, *, tokens: torch.Tensor, segments: torch.Tensor, audio: torch.Tensor,
@@ -171,7 +172,10 @@ class GapSlotEmo(nn.Module):
         v = self.vision_project(vision) * observed[:, 2].unsqueeze(-1)
         features = torch.stack((text, a, v), dim=1)
         if self.repair is not None:
-            features, effective = self.repair(features, observed, support)
+            # CLS/SEP have no aligned acoustic/visual observation to reconstruct.
+            # Artificially hidden content tokens have ID=0 but retain support=True.
+            repair_support = support & (tokens != 101) & (tokens != 102)
+            features, effective = self.repair(features, observed, repair_support)
         else:
             effective = observed
         positions = self.time_position(torch.arange(tokens.shape[1], device=tokens.device))

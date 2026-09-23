@@ -1,5 +1,11 @@
 # Repository instructions
 
+## User controls execution
+
+- The user decides when to run training and data-processing jobs. Do not start formal training or smoke training just because a GPU is available or code debugging is requested.
+- Complete code review and focused checks, then provide commands for the user to launch. Start a training job only on an explicit request to run it.
+- Preserve interrupted outputs as incomplete debug artifacts; do not report them as completed experiments or submission results.
+
 ## Organization
 
 - Keep each contest problem's implementation, configuration, validation and results in its own top-level folder: problem1, problem2 or problem3.

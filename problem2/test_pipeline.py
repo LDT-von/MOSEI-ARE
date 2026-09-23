@@ -1,13 +1,15 @@
 """Focused contract checks; these do not establish predictive performance."""
 
 import unittest
+from pathlib import Path
+import tempfile
 
 import numpy as np
 import torch
 
 from models.gap_slot_emo import GapSlotEmo
 from problem2.data import AlignedDataset, convert_split, make_gap
-from problem2.scripts.run import _loader, _predict
+from problem2.scripts.run import _checkpoint, _loader, _predict
 
 
 def fake_split():
@@ -55,6 +57,23 @@ class Problem2ContractTests(unittest.TestCase):
         self.assertLessEqual(abs(float(a["regression"].item())), 3)
         self.assertTrue(a["effective_observed"][0, 1, sample["artificial_gap"][1]].all())
         self.assertTrue(torch.all(a["slot_attention"][0, 0, :, ~args["observed"][0, 0]] == 0))
+        self.assertFalse(a["effective_observed"][0, 1:, [0, 7]].any())
+
+    def test_middle_gap_on_sparse_observations_removes_evidence(self):
+        observed = np.zeros((3, 10), dtype=bool)
+        observed[1, [1, 8]] = True
+        gap = make_gap(observed, np.ones(10, dtype=bool), modality=1, location="middle", fraction=0.5)
+        self.assertEqual(int(gap.sum()), 1)
+        self.assertTrue(np.all(gap <= observed))
+
+    def test_ablations_share_initial_backbone_parameters(self):
+        torch.manual_seed(42)
+        base = GapSlotEmo(vocab_size=128, dim=32, slots=4, use_gap_repair=False)
+        torch.manual_seed(42)
+        repaired = GapSlotEmo(vocab_size=128, dim=32, slots=4, use_gap_repair=True)
+        state = repaired.state_dict()
+        for key, value in base.state_dict().items():
+            self.assertTrue(torch.equal(value, state[key]), key)
 
     def test_all_missing_is_finite_and_backpropagates(self):
         model = GapSlotEmo(vocab_size=128, dim=32, slots=4, max_len=50, use_gap_repair=True)
@@ -82,6 +101,16 @@ class Problem2ContractTests(unittest.TestCase):
         self.assertEqual(result["ids"], ["one", "two"])
         self.assertEqual(len(result["predictions"]), 2)
         self.assertEqual(len(result["labels"]), 0)
+
+    def test_official_inference_rejects_smoke_checkpoint(self):
+        qa = Path(__file__).resolve().parent / "qa"
+        qa.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=qa) as folder:
+            self.assertEqual(Path(folder).resolve().parent, qa.resolve())
+            checkpoint = Path(folder) / "smoke.pt"
+            torch.save({"provenance": {"run_kind": "smoke_only_not_for_submission"}}, checkpoint)
+            with self.assertRaisesRegex(ValueError, "smoke checkpoint"):
+                _checkpoint(checkpoint, torch.device("cpu"))
 
 
 if __name__ == "__main__":

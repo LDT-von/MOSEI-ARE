@@ -153,6 +153,8 @@ def make_gap(
     """One contiguous position interval; only originally observed entries count as masked."""
     if modality not in (0, 1, 2) or location not in ("start", "middle", "end"):
         raise ValueError("invalid gap modality or location")
+    if not 0 < fraction <= 1:
+        raise ValueError("gap fraction must be in (0,1]")
     eligible = np.flatnonzero(observed[modality])
     if modality == 0:
         content = np.flatnonzero(support)
@@ -169,6 +171,11 @@ def make_gap(
         start = max(lo, hi - width + 1)
     else:
         start = max(lo, min((lo + hi - width + 1) // 2, hi - width + 1))
+    # If the center lies in a pre-existing hole, use the closest window containing
+    # observed data. Otherwise the purported corruption can remove nothing.
+    starts = range(lo, max(lo, hi - width + 1) + 1)
+    viable = [s for s in starts if observed[modality, s:s + width].any()]
+    start = min(viable, key=lambda s: (abs(s - start), s))
     region = np.arange(start, min(start + width, observed.shape[1]))
     gap[modality, region] = observed[modality, region]
     return gap
@@ -181,6 +188,8 @@ class AlignedDataset(Dataset):
     ) -> None:
         if mode not in ("clean", "mixed", "fixed"):
             raise ValueError("mode must be clean, mixed or fixed")
+        if not 0 <= probability <= 1 or (mode == "fixed" and fixed is None):
+            raise ValueError("invalid masking probability or missing fixed-gap configuration")
         self.split, self.mode, self.seed, self.probability, self.fixed = split, mode, seed, probability, fixed
         self.epoch = 0
 

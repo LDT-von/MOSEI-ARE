@@ -17,3 +17,5 @@ Evaluate Accuracy/F1 for polarity and MAE/Pearson for intensity on validation da
 ## Status
 
 Structure only. No model, prediction or performance result is claimed yet.
+
+赛题文献与实际数据接口审计后的建模路线见 [问题二三文献解读与建模路线](../docs/问题二三文献解读与建模路线.md)。解释输出须通过原文、音轨和视频PTS回查；模态权重仅作辅助展示，核心贡献以反事实遮挡验证。
