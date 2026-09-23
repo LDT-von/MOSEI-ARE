@@ -5,6 +5,9 @@ __pycache__/
 .venv/
 .idea/
 .vscode/
+.codegraph/
+legacy/SlotEmo_experiments/outputs/
+legacy/SlotEmo_experiments/experiments/exp3_problem1_alignment.json
 
 # Large local assets
 data/raw/

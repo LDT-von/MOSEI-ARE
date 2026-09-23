@@ -1,0 +1,9 @@
+实验: exp2_slot_v2
+配置: dropout=0.3, sparse_weight=0.1, temp=2.0
+最佳F1: 0.4270 (epoch 23)
+
+测试集结果:
+  Accuracy: 0.5378
+  F1: 0.4659
+  MAE: 0.7891
+  Pearson: 0.5104
