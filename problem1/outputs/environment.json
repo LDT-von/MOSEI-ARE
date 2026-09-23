@@ -1,0 +1,20 @@
+{
+  "python": "3.10.11",
+  "imported_opencv_runtime": "4.10.0",
+  "installed_opencv_distributions": {
+    "opencv-python": "4.7.0.72",
+    "opencv-contrib-python": "4.10.0.84",
+    "opencv-python-headless": "4.12.0.88"
+  },
+  "opencv_note": "The source environment has overlapping OpenCV distributions; reproduction requirements select one matching the imported cv2 runtime.",
+  "recorded_package_versions": {
+    "torch": "2.6.0+cu124",
+    "torchaudio": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "transformers": "4.44.2",
+    "av": "16.0.1",
+    "numpy": "2.2.6",
+    "opencv-python": "4.7.0.72",
+    "Pillow": "11.3.0"
+  }
+}

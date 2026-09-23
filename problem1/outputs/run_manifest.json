@@ -1,0 +1,132 @@
+{
+  "sample_count": 100,
+  "full_expected_count": 100,
+  "device": "cuda",
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "torchaudio": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "transformers": "4.44.2",
+    "av": "16.0.1",
+    "numpy": "2.2.6",
+    "opencv-python": "4.7.0.72",
+    "Pillow": "11.3.0"
+  },
+  "ffmpeg_libraries": {
+    "libavutil": [
+      60,
+      8,
+      100
+    ],
+    "libavcodec": [
+      62,
+      11,
+      100
+    ],
+    "libavformat": [
+      62,
+      3,
+      100
+    ],
+    "libavdevice": [
+      62,
+      1,
+      100
+    ],
+    "libavfilter": [
+      11,
+      4,
+      100
+    ],
+    "libswscale": [
+      9,
+      1,
+      100
+    ],
+    "libswresample": [
+      6,
+      1,
+      100
+    ]
+  },
+  "text_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "text_revision": "86741b4e3f5cb7765a600d3a3d55a0f6a6cb443d",
+  "ctc_model": "WAV2VEC2_ASR_BASE_960H",
+  "vision_model": "ResNet18_IMAGENET1K_V1",
+  "grid_seconds": 0.2,
+  "audio_sample_rate": 16000,
+  "audio_window_seconds": 0.04,
+  "audio_hop_seconds": 0.02,
+  "audio_names": [
+    "mfcc_0",
+    "mfcc_1",
+    "mfcc_2",
+    "mfcc_3",
+    "mfcc_4",
+    "mfcc_5",
+    "mfcc_6",
+    "mfcc_7",
+    "mfcc_8",
+    "mfcc_9",
+    "mfcc_10",
+    "mfcc_11",
+    "mfcc_12",
+    "delta_mfcc_0",
+    "delta_mfcc_1",
+    "delta_mfcc_2",
+    "delta_mfcc_3",
+    "delta_mfcc_4",
+    "delta_mfcc_5",
+    "delta_mfcc_6",
+    "delta_mfcc_7",
+    "delta_mfcc_8",
+    "delta_mfcc_9",
+    "delta_mfcc_10",
+    "delta_mfcc_11",
+    "delta_mfcc_12",
+    "log_rms",
+    "zero_crossing_rate",
+    "spectral_centroid_hz",
+    "rolloff85_hz",
+    "f0_hz",
+    "periodicity",
+    "voiced"
+  ],
+  "text_window_tokens": 126,
+  "text_stride_tokens": 96,
+  "ctc_review_threshold": 0.5,
+  "ctc_review_threshold_meaning": "predefined diagnostic only, not calibrated correctness probability",
+  "source_label_sha256": "827334f782b1f242c84ad944a657bc7f7c63643f71ae9c977811a3eecdd3ab33",
+  "pipeline_sha256": "2709b60ab8e48da15790b936941b0dc787c7e6b870267ca275d7b8f649897014",
+  "pretrained_weight_sha256": {
+    "wav2vec2_fairseq_base_ls960_asr_ls960.pth": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d",
+    "resnet18-f37072fd.pth": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+  },
+  "no_sentiment_training": true,
+  "quality_gate_sha256": "85bbc8c54e4d561c8494a0a97b5da091ab729f304586bb455aa6e1806478184c",
+  "quality_gate_thresholds": {
+    "sample_ctc": 0.5,
+    "reference_word_recall": 0.5,
+    "word_ctc": 0.5
+  },
+  "quality_threshold_sensitivity": [
+    {
+      "ctc_threshold": 0.4,
+      "lexical_recall_min": 0.5,
+      "samples_passing": 79
+    },
+    {
+      "ctc_threshold": 0.5,
+      "lexical_recall_min": 0.5,
+      "samples_passing": 79
+    },
+    {
+      "ctc_threshold": 0.6,
+      "lexical_recall_min": 0.5,
+      "samples_passing": 79
+    }
+  ],
+  "feature_extraction_pipeline_sha256": "2709b60ab8e48da15790b936941b0dc787c7e6b870267ca275d7b8f649897014",
+  "repository_pipeline_sha256": "9275b92ba7184bd647c8491ab1f2e33cc1b1572a6e70fc9b9acada777f45cc82",
+  "path_only_relocation_note": "After extraction, the default workspace root was adjusted to the new repository layout. Feature extraction logic and existing output files were not changed."
+}

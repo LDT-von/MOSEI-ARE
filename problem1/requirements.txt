@@ -1,0 +1,13 @@
+# Python 3.10. Original run: CUDA 12.4 builds of the matched torch packages.
+torch==2.6.0
+torchaudio==2.6.0
+torchvision==0.21.0
+transformers==4.44.2
+huggingface-hub==0.36.2
+av==16.0.1
+numpy==2.2.6
+opencv-contrib-python==4.10.0.84
+Pillow==11.3.0
+matplotlib==3.10.6
+openpyxl==3.1.2
+requests==2.32.5

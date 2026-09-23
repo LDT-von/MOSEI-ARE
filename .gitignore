@@ -1,0 +1,40 @@
+# Python and editor
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.idea/
+.vscode/
+
+# Large local assets
+data/raw/
+data/attachments/
+**/assets/
+**/outputs/features/*.npz
+**/outputs/metadata/*.json
+**/outputs/checkpoints/
+**/outputs/models/
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.safetensors
+**/*.download
+**/*.partial
+*.zip
+**/outputs/extraction.log
+**/outputs/asr_audit.log
+**/qa/
+
+# Rebuildable per-sample contest data and audits (do not publish in Git)
+problem1/input_manifest.json
+problem1/outputs/alignment_review.csv
+problem1/outputs/example/
+problem1/outputs/independent_asr_audit.json
+problem1/outputs/media_audit.json
+problem1/outputs/processing_log.jsonl
+problem1/outputs/summary_100.csv
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini

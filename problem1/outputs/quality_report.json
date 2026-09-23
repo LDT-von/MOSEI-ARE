@@ -1,0 +1,36 @@
+{
+  "source_samples": 100,
+  "feature_samples": 100,
+  "all_source_hashes_unchanged": true,
+  "all_labels_and_transcripts_unchanged": true,
+  "finite_values_and_shapes": true,
+  "full_timeline_preserved": true,
+  "independent_overlap_reconstruction_passed": true,
+  "maximum_overlap_reconstruction_error": {
+    "text": 0.0004883448626644693,
+    "audio": 0.0008934221896197414
+  },
+  "total_duration_seconds": 787.4980179999997,
+  "duration_min_seconds": 2.257,
+  "duration_max_seconds": 29.288021,
+  "total_aligned_bins": 3987,
+  "total_words": 1931,
+  "flagged_words": 388,
+  "samples_with_flagged_words": 62,
+  "samples_passing_automatic_alignment_screen": 79,
+  "samples_with_timed_text_masked": 21,
+  "face_detected_bins": 3634,
+  "unaligned_or_unavailable_bins": {
+    "text": 1552,
+    "audio": 59,
+    "vision": 0
+  },
+  "video_pts_distance_max_seconds": 0.06666684150695801,
+  "video_pts_distance_mean_seconds": 0.0014352899615645619,
+  "header_decoded_frame_count_mismatches": 90,
+  "features_bytes": 17215865,
+  "mean_sample_ctc_score": 0.7638771200000001,
+  "boundary_accuracy_measured_against_human_timestamps": false,
+  "visual_features_are_emotion_probabilities": false,
+  "sentiment_prediction_performance_measured": false
+}
