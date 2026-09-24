@@ -1,0 +1,37 @@
+{
+  "run_kind": "training",
+  "arm": "B",
+  "seed": 42,
+  "data_release": "aligned_50.pkl",
+  "attachment2_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "device": "cuda",
+  "torch": "2.6.0+cu124",
+  "numpy": "2.2.6",
+  "config": {
+    "seed": 42,
+    "validation_seed": 20260923,
+    "batch_size": 32,
+    "epochs": 30,
+    "patience": 7,
+    "min_delta": 0.0001,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "regression_weight": 0.5,
+    "train_missing_probability": 0.8,
+    "model": {
+      "vocab_size": 30522,
+      "dim": 128,
+      "slots": 16,
+      "slot_heads": 4,
+      "slot_iterations": 3,
+      "max_len": 50,
+      "dropout": 0.1
+    }
+  },
+  "model_source_sha256": "0d42ee83907e66456fc90c76811a9b7776c9b6b7571488bd8e859dcb06aabf5e",
+  "data_source_sha256": "d5c705019d2b53973ec5a62b68304e02e58d2fef14fa221ca38409ff4881ff51",
+  "runner_source_sha256": "fa43b9f6344e921bfaa942394e6347b29afe4d5f073e0bf467d370d3db26de7c",
+  "train_n": 3395,
+  "valid_n": 728
+}

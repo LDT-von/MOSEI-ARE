@@ -37,6 +37,7 @@ problem1/outputs/independent_asr_audit.json
 problem1/outputs/media_audit.json
 problem1/outputs/processing_log.jsonl
 problem1/outputs/summary_100.csv
+problem2/outputs/*_seed_42/*.predictions.csv
 
 # Operating system files
 .DS_Store

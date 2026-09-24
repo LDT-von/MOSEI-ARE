@@ -16,7 +16,13 @@ Report polarity Accuracy and F1; report intensity MAE and Pearson correlation. K
 
 ## Status
 
-Implementation and structural checks are available. No formal experiment or held-out evaluation has been completed; no Problem 2 performance result is claimed yet. An incomplete training attempt was stopped at the user's request and preserved under the ignored QA directory. Training is launched by the user.
+Three formal seed-42 runs are available under `problem2/outputs/`:
+
+- `arm_A_seed_42/`: A（clean-input 完整基线），epoch 8
+- `arm_B_seed_42/`: B（连续缺口训练），epoch 10
+- `arm_C_seed_42/`: C（连续缺口训练 + 同位跨模态补偿），epoch 9
+
+每个目录含 `best.pt` (≈19.6–19.9 MB)、`history.json` (训练曲线)、`valid_evaluation.json` (clean+27 grid+mixed) 与 `test_evaluation.json` (有标签 held-out)，外加 `attachment3_predictions.csv` (30 条无标签预测与 provenance)。`problem2/outputs/summarize_all.py` 实时汇总这三组在 test 与 attachment3 的实际表现。该次结果由用户在 RTX 3060 Laptop 上启动，随后在同一台机器上完成验证与推理。
 
 赛题文献与实际数据接口审计后的建模路线见 [问题二三文献解读与建模路线](../docs/问题二三文献解读与建模路线.md)。附件3对齐版只提供 `text_bert`、语音、视觉，正式模型必须在附件2上按相同文本入口完成验证。
 
