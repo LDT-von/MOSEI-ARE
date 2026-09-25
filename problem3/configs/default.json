@@ -1,7 +1,0 @@
-{
-  "checkpoint": "../../problem2/outputs/arm_C_seed_42/best.pt",
-  "window_length": 6,
-  "window_top_k": 3,
-  "validation_sample_size": 16,
-  "attachment4_sample_size": 20
-}

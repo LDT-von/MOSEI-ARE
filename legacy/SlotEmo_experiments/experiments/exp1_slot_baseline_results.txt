@@ -1,8 +1,0 @@
-实验: exp1_slot_baseline
-最佳F1: 0.6184 (epoch 2)
-
-测试集结果:
-  Accuracy: 0.6382
-  F1: 0.6363
-  MAE: 0.6811
-  Pearson: 0.6498
