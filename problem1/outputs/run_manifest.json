@@ -103,7 +103,7 @@
     "resnet18-f37072fd.pth": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
   },
   "no_sentiment_training": true,
-  "quality_gate_sha256": "85bbc8c54e4d561c8494a0a97b5da091ab729f304586bb455aa6e1806478184c",
+  "quality_gate_sha256": "925a672d15e5d20493682232b48ad77ce709523d5494d31915da02b731f8f16d",
   "quality_gate_thresholds": {
     "sample_ctc": 0.5,
     "reference_word_recall": 0.5,
@@ -128,5 +128,23 @@
   ],
   "feature_extraction_pipeline_sha256": "2709b60ab8e48da15790b936941b0dc787c7e6b870267ca275d7b8f649897014",
   "repository_pipeline_sha256": "63c1ed64dc48051777c0a0840d4e98ba19331859439c12e2a1b6377c332af879",
-  "path_only_relocation_note": "After extraction, the default workspace root and run-manifest reporting were adjusted. The feature extraction calculations and saved per-sample features were not changed."
+  "path_only_relocation_note": "After extraction, the default workspace root and run-manifest reporting were adjusted. The feature extraction calculations and saved per-sample features were not changed.",
+  "diagnostic_alignment_health": {
+    "health_buckets": {
+      "high": 32,
+      "medium": 50,
+      "low": 18
+    },
+    "flag_reason_counts": {
+      "low_ctc": 237,
+      "very_short": 206,
+      "marginal_ctc": 89,
+      "overlap_risk": 78,
+      "filler_like": 51,
+      "edge_clip_start": 26,
+      "edge_clip_end": 12,
+      "slow": 5
+    },
+    "diagnostic_script_sha256": "94acf43d734f1ffb86e17d46f9a9c104ff47fc32138dbf72b81e763d4d02a3d9"
+  }
 }

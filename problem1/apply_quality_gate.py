@@ -28,6 +28,17 @@ def main():
     source = json.loads((BASE / 'input_manifest.json').read_text(encoding='utf-8'))
     rows = []
     gate_hash = sha256(__file__)
+    # Read diagnostics output if present (produced by diagnostics.py).
+    diag_path = out / 'diagnostic_summary.csv'
+    health_path = out / 'alignment_health.json'
+    diag_map = {}
+    if diag_path.exists():
+        import csv as _csv
+        for r in _csv.DictReader(diag_path.open(encoding='utf-8-sig')):
+            diag_map[r['sample_id']] = r
+    health_doc = {}
+    if health_path.exists():
+        health_doc = json.loads(health_path.read_text(encoding='utf-8'))
     for original in source['rows']:
         meta_path = out / 'metadata' / (original['sample_id'] + '.json')
         meta = json.loads(meta_path.read_text(encoding='utf-8'))
@@ -53,6 +64,22 @@ def main():
                    text_usable_words=int(usable.sum()), lexical_recall=round(recall, 6),
                    alignment_status='passed_automatic_screen' if sample_pass else 'unreliable_masked',
                    feature_sha256=sha256(feature_path))
+        # Augment summary with diagnostic metrics if available.
+        diag = diag_map.get(original['sample_id'])
+        if diag:
+            row.update({
+                'words_per_second': round(float(diag['words_per_second']), 4),
+                'speech_density': round(float(diag['speech_density']), 4),
+                'mean_word_seconds': round(float(diag['mean_word_seconds']), 4),
+                'n_short_pauses_gt_300ms': int(diag['n_short_pauses_gt_300ms']),
+                'arousal_proxy_mean': round(float(diag['arousal_proxy_mean']), 4),
+                'arousal_proxy_std': round(float(diag['arousal_proxy_std']), 4),
+                'voiced_fraction': round(float(diag['voiced_fraction']), 4),
+                'pitch_range_hz': round(float(diag['pitch_range_hz']), 2),
+                'n_flagged_words_extended': int(diag['n_flagged']),
+                'n_fallback_alignments': int(diag['n_fallback']),
+                'alignment_health': diag['alignment_health'],
+            })
         for word, keep in zip(meta['words'], usable):
             word['usable_for_timed_text'] = bool(keep)
             word['review_required'] = not bool(keep)
@@ -75,6 +102,12 @@ def main():
     manifest['quality_gate_sha256'] = gate_hash
     manifest['quality_gate_thresholds'] = {'sample_ctc': .5, 'reference_word_recall': .5, 'word_ctc': .5}
     manifest['quality_threshold_sensitivity'] = sensitivity
+    if health_doc:
+        manifest['diagnostic_alignment_health'] = {
+            'health_buckets': health_doc.get('health_buckets', {}),
+            'flag_reason_counts': health_doc.get('flag_reason_counts', {}),
+            'diagnostic_script_sha256': health_doc.get('diagnostic_script_sha256'),
+        }
     save_json(manifest_path, manifest)
     print('Automatic screen passed:', sum(r['alignment_status'] == 'passed_automatic_screen' for r in rows), '/ 100')
     print('Retained but timed text masked:', sum(r['alignment_status'] == 'unreliable_masked' for r in rows))

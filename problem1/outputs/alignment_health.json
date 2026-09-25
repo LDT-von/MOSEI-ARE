@@ -1,0 +1,68 @@
+{
+  "total_samples": 100,
+  "health_buckets": {
+    "high": 32,
+    "medium": 50,
+    "low": 18
+  },
+  "flag_reason_counts": {
+    "low_ctc": 237,
+    "very_short": 206,
+    "marginal_ctc": 89,
+    "overlap_risk": 78,
+    "filler_like": 51,
+    "edge_clip_start": 26,
+    "edge_clip_end": 12,
+    "slow": 5
+  },
+  "arousal_by_health": {
+    "high": {
+      "mean": 0.41580291208811104,
+      "std": 0.7559240892464094,
+      "min": -1.0524746179580688,
+      "max": 2.016136646270752,
+      "n": 32
+    },
+    "medium": {
+      "mean": 0.4510170949995518,
+      "std": 0.5607396114584501,
+      "min": -1.0140446424484253,
+      "max": 1.489558458328247,
+      "n": 50
+    },
+    "low": {
+      "mean": 0.254867242442237,
+      "std": 0.8190342208236652,
+      "min": -1.3767290115356445,
+      "max": 1.541764736175537,
+      "n": 18
+    }
+  },
+  "speech_rate_by_health": {
+    "high": {
+      "mean": 4.903175500682588,
+      "std": 1.121614233728847,
+      "min": 2.6470588235294126,
+      "max": 7.575757575757575,
+      "n": 32
+    },
+    "medium": {
+      "mean": 5.136463726827512,
+      "std": 1.1357841147937775,
+      "min": 1.866666666666667,
+      "max": 8.333333333333336,
+      "n": 50
+    },
+    "low": {
+      "mean": 4.323589329135337,
+      "std": 1.576058987472236,
+      "min": 2.037037037037037,
+      "max": 8.169934640522875,
+      "n": 18
+    }
+  },
+  "fallback_used_samples": 0,
+  "fallback_used_words": 0,
+  "n_flagged_words_total": 572,
+  "diagnostic_script_sha256": "94acf43d734f1ffb86e17d46f9a9c104ff47fc32138dbf72b81e763d4d02a3d9"
+}

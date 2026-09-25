@@ -7,14 +7,43 @@
 ## 主要文件
 
 - `outputs/features/`：100份NPZ，包含原生及对齐后的三模态特征。
-- `outputs/summary_100.csv`：全量结果、时长、维度、有效位置数和筛查状态。
+- `outputs/summary_100.csv`：全量结果、时长、维度、有效位置数、筛查状态与诊断指标（41 列）。
 - `outputs/metadata/`：100份来源JSON，包括原文、词时间、实际帧号、裁剪框和哈希。
 - `outputs/example/`：典型样本时间对应图与逐位置记录。图中文字块是候选对齐。
 - `outputs/alignment_review.csv`：需人工复核的词及候选时间。
-- `outputs/quality_report.json`：结构、数值与重建验证结果。
+- `outputs/quality_report.json`：结构、数值、重建验证与诊断指标汇总。
 - `outputs/media_audit.json`：MP4播放与编码载荷时间差异、逐声道零信号审计。
 - `outputs/independent_asr_audit.json`：四条样本的独立自动语音识别抽查。
 - `outputs/run_manifest.json`、`environment.json`、`processing_log.jsonl`：版本、参数、权重哈希和逐样本日志。
+
+## 诊断指标 (diagnostics.py)
+
+`diagnostics.py` 在已生成 100 份特征之上做后处理诊断，不重跑主流水线，**不改**原有 47 字段特征张量，写入：
+
+- `outputs/diagnostic_summary.csv`：100 行 × 17 列，含每样本 speech_rate、speech_density、arousal_proxy、pitch_range、boundary_residual、alignment_health。
+- `outputs/flag_breakdown.csv`：572 个被标记词的扩展原因（low_ctc、very_short、marginal_ctc、overlap_risk、filler_like、edge_clip、slow）。
+- `outputs/alignment_health.json`：聚合分布（high=32 / medium=50 / low=18）、按健康度的 arousal/speech_rate 对比。
+
+运行：`python diagnostics.py`。脚本自带音频能量回退（energy fallback）尝试给 CTC score < 0.25 的词重新分配边界，运行 SHA-256 写入 `alignment_health.json` 供追溯。`apply_quality_gate.py` 与 `verify_outputs.py` 会读取上述诊断文件，把 12 列新指标并入 `summary_100.csv` 与 `quality_report.json`，并把对齐健康标签扩展到每个样本。
+
+新增的 quality_report 字段：
+
+```text
+diagnostic_metrics:
+  speech_rate_words_per_second : 均值/标准差/极值
+  speech_density               : 语音覆盖率
+  arousal_proxy_mean           : 跨样本统一的 RMS+centroid 唤醒度近似
+  arousal_proxy_within_sample_std : 样本内唤醒度波动
+  voiced_fraction              : voiced 帧占比
+  pitch_range_hz               : 基频跨度
+  flagged_words_under_extended_rules : 扩展规则下被标记词数
+  alignment_health_buckets    : {high, medium, low} 三档分布
+  flag_reason_counts           : 9 类原因计数
+  arousal_by_alignment_health  : 健康度 × 唤醒度对比
+  speech_rate_by_alignment_health : 健康度 × 语速对比
+```
+
+这些指标用作**解释为什么某些样本失败**而非用作正确率声明。需要在 `qa/manual_quality_report.json` 中提供真实人工边界才能换算为边界误差。
 
 ## 使用已有结果
 
@@ -40,7 +69,8 @@ python inventory.py --workspace <题目工作目录>
 python prepare_models.py
 python pipeline.py --workspace <题目工作目录>
 python apply_quality_gate.py
-python verify_outputs.py
+python diagnostics.py            # 新增：纯 CPU 后处理诊断，可选
+python verify_outputs.py         # 会读取 diagnostics.py 的输出，写入扩展 quality_report
 python audit_media.py
 python test_alignment.py
 python load_features.py

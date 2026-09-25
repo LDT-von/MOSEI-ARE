@@ -7,8 +7,8 @@
   "full_timeline_preserved": true,
   "independent_overlap_reconstruction_passed": true,
   "maximum_overlap_reconstruction_error": {
-    "text": 0.0004883448626644693,
-    "audio": 0.0008934221896197414
+    "text": 0.003906469525871259,
+    "audio": 0.0007628950334037654
   },
   "total_duration_seconds": 787.4980179999997,
   "duration_min_seconds": 2.257,
@@ -19,18 +19,120 @@
   "samples_with_flagged_words": 62,
   "samples_passing_automatic_alignment_screen": 79,
   "samples_with_timed_text_masked": 21,
-  "face_detected_bins": 3634,
+  "face_detected_bins": 3633,
   "unaligned_or_unavailable_bins": {
     "text": 1552,
     "audio": 59,
     "vision": 0
   },
   "video_pts_distance_max_seconds": 0.06666684150695801,
-  "video_pts_distance_mean_seconds": 0.0014352899615645619,
+  "video_pts_distance_mean_seconds": 0.0014352907090519555,
   "header_decoded_frame_count_mismatches": 90,
-  "features_bytes": 17215865,
-  "mean_sample_ctc_score": 0.7638771200000001,
+  "features_bytes": 13314907,
+  "mean_sample_ctc_score": 0.7637801300000001,
   "boundary_accuracy_measured_against_human_timestamps": false,
   "visual_features_are_emotion_probabilities": false,
-  "sentiment_prediction_performance_measured": false
+  "sentiment_prediction_performance_measured": false,
+  "diagnostic_metrics": {
+    "speech_rate_words_per_second": {
+      "mean": 4.915496,
+      "std": 1.2578581579748966,
+      "min": 1.8667,
+      "max": 8.3333
+    },
+    "speech_density": {
+      "mean": 0.52695,
+      "std": 0.11100623090619734,
+      "min": 0.2667,
+      "max": 0.9438
+    },
+    "arousal_proxy_mean": {
+      "mean": 0.404442,
+      "std": 0.6826141340728303,
+      "min": -1.3767,
+      "max": 2.0161
+    },
+    "arousal_proxy_within_sample_std": {
+      "mean": 1.071556,
+      "std": 0.4240627303406891
+    },
+    "voiced_fraction": {
+      "mean": 0.770949,
+      "std": 0.16093327778616828
+    },
+    "pitch_range_hz": {
+      "mean": 181.9732,
+      "std": 72.82377879346828
+    },
+    "flagged_words_under_extended_rules": 572,
+    "samples_with_at_least_one_flag": 94,
+    "fallback_aligner_uses": 0,
+    "alignment_health_buckets": {
+      "high": 32,
+      "medium": 50,
+      "low": 18
+    },
+    "flag_reason_counts": {
+      "low_ctc": 237,
+      "very_short": 206,
+      "marginal_ctc": 89,
+      "overlap_risk": 78,
+      "filler_like": 51,
+      "edge_clip_start": 26,
+      "edge_clip_end": 12,
+      "slow": 5
+    },
+    "arousal_by_alignment_health": {
+      "high": {
+        "mean": 0.41580291208811104,
+        "std": 0.7559240892464094,
+        "min": -1.0524746179580688,
+        "max": 2.016136646270752,
+        "n": 32
+      },
+      "medium": {
+        "mean": 0.4510170949995518,
+        "std": 0.5607396114584501,
+        "min": -1.0140446424484253,
+        "max": 1.489558458328247,
+        "n": 50
+      },
+      "low": {
+        "mean": 0.254867242442237,
+        "std": 0.8190342208236652,
+        "min": -1.3767290115356445,
+        "max": 1.541764736175537,
+        "n": 18
+      }
+    },
+    "speech_rate_by_alignment_health": {
+      "high": {
+        "mean": 4.903175500682588,
+        "std": 1.121614233728847,
+        "min": 2.6470588235294126,
+        "max": 7.575757575757575,
+        "n": 32
+      },
+      "medium": {
+        "mean": 5.136463726827512,
+        "std": 1.1357841147937775,
+        "min": 1.866666666666667,
+        "max": 8.333333333333336,
+        "n": 50
+      },
+      "low": {
+        "mean": 4.323589329135337,
+        "std": 1.576058987472236,
+        "min": 2.037037037037037,
+        "max": 8.169934640522875,
+        "n": 18
+      }
+    },
+    "diagnostic_script_sha256": "94acf43d734f1ffb86e17d46f9a9c104ff47fc32138dbf72b81e763d4d02a3d9"
+  },
+  "diagnostic_files": {
+    "per_sample_csv": "diagnostic_summary.csv",
+    "flag_breakdown_csv": "flag_breakdown.csv",
+    "alignment_health_json": "alignment_health.json"
+  }
 }
