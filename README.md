@@ -105,6 +105,8 @@ python -m unittest problem3.test_pipeline -v
 
 ## 核心指标汇总
 
+![Arm 对比](problem2/outputs/_figures/fig1_arm_comparison.png)
+
 ### 问题二（Arm C，seed=2024 · 多种子扫描最优）
 
 | Split | Accuracy | F1-macro | MAE | Pearson |
@@ -119,6 +121,8 @@ python -m unittest problem3.test_pipeline -v
 ### 问题三（附件4，20 条，无标签）
 
 预测分布：负 6 / 中 2 / 正 12；强度范围 [-1.74, +1.12]；主控模态 audio/vision/text ≈ 7/6/7。
+
+![附件3/4 预测分布](problem2/outputs/_figures/fig5_attachment_predictions.png)
 
 ## 数据位置
 
