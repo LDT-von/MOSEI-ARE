@@ -30,7 +30,7 @@
     }
   },
   "provenance": {
-    "checkpoint": "C:\\Users\\栋栋\\Desktop\\E题\\MOSEI-ARE\\problem2\\outputs\\arm_C_seed_42\\best.pt",
+    "checkpoint": "/data1/E题/MOSEI-ARE/problem2/outputs/_scan_C_seed_2024/best.pt",
     "checkpoint_sha256": "b32bc106ddd128c058e55935819a1acc816916e7b65b37acc2d6136bd3b061d2",
     "split": "test",
     "feature_version": "aligned_50",

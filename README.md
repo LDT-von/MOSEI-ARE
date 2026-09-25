@@ -27,6 +27,8 @@
 
 **前提**：Python 3.10+，PyTorch 2.x，CUDA 11.8/12.x，NVIDIA GPU（≥6 GB 显存）。`MOSEI_DATA_ROOT` 指向包含附件 1-4 的数据根目录。
 
+**多种子扫描**：Arm C 的最终权重来自 `_run_seed_scan.sh 1 7 100 2024` 的多种子扫描（CPU 跑约 25 分钟/组）；扫描汇总在 `problem2/问题二建模与结果.md` 第 5 节。
+
 ### 问题一（仅 CPU 特征提取）
 
 ```powershell
@@ -103,18 +105,20 @@ python -m unittest problem3.test_pipeline -v
 
 ## 核心指标汇总
 
-### 问题二（Arm C，seed=42）
+### 问题二（Arm C，seed=2024 · 多种子扫描最优）
 
 | Split | Accuracy | F1-macro | MAE | Pearson |
 |-------|----------|-----------|-----|---------|
-| valid clean | 0.473 | 0.442 | 0.760 | 0.331 |
-| valid mixed | 0.486 | 0.464 | 0.756 | 0.322 |
-| test clean | 0.492 | 0.449 | 0.839 | 0.393 |
-| test mixed | 0.490 | 0.446 | 0.845 | 0.368 |
+| valid clean | 0.490 | 0.459 | 0.801 | 0.288 |
+| valid mixed | 0.496 | 0.460 | 0.801 | 0.280 |
+| test clean | 0.520 | 0.470 | 0.835 | 0.396 |
+| test mixed | 0.514 | 0.463 | 0.850 | 0.363 |
+
+> 复现命令默认仍以 `--seed 42` 训练 Arm C；如果你想替换为 seed=2024 的权重，请用 `problem2/outputs/_scan_C_seed_2024/best.pt` 覆盖 `problem2/outputs/arm_C_seed_42/best.pt`（其它附属文件已就地替换）。详细扫描脚本与对比见 `_run_seed_scan.sh` 与 `problem2/问题二建模与结果.md` 第 5 节。
 
 ### 问题三（附件4，20 条，无标签）
 
-预测分布：负 6 / 中 4 / 正 10；强度范围 [-1.69, +0.96]；主控模态 audio/vision/text 各约 1/3。
+预测分布：负 6 / 中 2 / 正 12；强度范围 [-1.74, +1.12]；主控模态 audio/vision/text ≈ 7/6/7。
 
 ## 数据位置
 

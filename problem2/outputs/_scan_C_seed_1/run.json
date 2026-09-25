@@ -1,14 +1,14 @@
 {
   "run_kind": "training",
   "arm": "C",
-  "seed": 2024,
+  "seed": 1,
   "data_release": "aligned_50.pkl",
   "attachment2_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
   "device": "cpu",
   "torch": "2.6.0+cu124",
   "numpy": "1.26.4",
   "config": {
-    "seed": 2024,
+    "seed": 1,
     "validation_seed": 20260923,
     "batch_size": 32,
     "epochs": 30,

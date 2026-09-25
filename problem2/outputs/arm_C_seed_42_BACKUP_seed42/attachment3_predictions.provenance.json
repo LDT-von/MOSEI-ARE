@@ -1,9 +1,9 @@
 {
-  "checkpoint": "/data1/E题/MOSEI-ARE/problem2/outputs/arm_C_seed_42/best.pt",
-  "checkpoint_sha256": "b32bc106ddd128c058e55935819a1acc816916e7b65b37acc2d6136bd3b061d2",
+  "checkpoint": "C:\\Users\\栋栋\\Desktop\\E题\\MOSEI-ARE\\problem2\\outputs\\arm_C_seed_42\\best.pt",
+  "checkpoint_sha256": "eca6a26cbcd427fad7f40376b6aae0d734c4d053d36618af1a1fecb194d5a133",
   "attachment3_files": 30,
   "feature_version": "aligned_50",
-  "training_seed": 2024,
+  "training_seed": 42,
   "run_kind": "training",
   "model_source_sha256": "0d42ee83907e66456fc90c76811a9b7776c9b6b7571488bd8e859dcb06aabf5e",
   "polarity_map": {

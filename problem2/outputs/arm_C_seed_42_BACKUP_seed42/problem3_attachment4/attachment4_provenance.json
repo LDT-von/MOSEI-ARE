@@ -1,7 +1,7 @@
 {
-  "checkpoint": "/data1/E题/MOSEI-ARE/problem2/outputs/arm_C_seed_42/best.pt",
+  "checkpoint": "C:\\Users\\栋栋\\Desktop\\E题\\MOSEI-ARE\\problem2\\outputs\\arm_C_seed_42\\best.pt",
   "attachment4_files": 20,
-  "video_directory": "/data1/E题/E题数据/E题数据/附件4-可解释专项视频样本与特征文件/附件4-可解释专项视频样本与特征文件/对齐版本/videos",
+  "video_directory": "C:\\Users\\栋栋\\Desktop\\E题\\E题数据\\E题数据\\附件4-可解释专项视频样本与特征文件\\附件4-可解释专项视频样本与特征文件\\对齐版本\\videos",
   "grid_seconds": [
     0.1,
     0.30000000000000004,
@@ -57,7 +57,7 @@
   "window_length_positions": 6,
   "window_length_seconds": 1.2,
   "feature_version": "aligned_50",
-  "training_seed": 2024,
+  "training_seed": 42,
   "run_kind": "training",
   "model_source_sha256": "0d42ee83907e66456fc90c76811a9b7776c9b6b7571488bd8e859dcb06aabf5e",
   "polarity_map": {

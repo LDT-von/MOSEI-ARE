@@ -1,0 +1,39 @@
+{
+  "clean": {
+    "n": 727,
+    "accuracy": 0.5240715268225584,
+    "f1_macro": 0.45669468802798835,
+    "f1_weighted": 0.5121074197811504,
+    "neutral_recall": 0.2088607594936709,
+    "mae": 0.84560227394104,
+    "pearson": 0.3983422640029247,
+    "n_with_artificial_gap": 0,
+    "on_changed_samples": null
+  },
+  "mixed": {
+    "n": 727,
+    "accuracy": 0.5226960110041265,
+    "f1_macro": 0.45745517683486847,
+    "f1_weighted": 0.5119494594009664,
+    "neutral_recall": 0.20253164556962025,
+    "mae": 0.8544895052909851,
+    "pearson": 0.3851120001610949,
+    "n_with_artificial_gap": 716,
+    "on_changed_samples": {
+      "n": 716,
+      "accuracy": 0.5223463687150838,
+      "f1_macro": 0.45322433299965564,
+      "f1_weighted": 0.5120751550777091,
+      "neutral_recall": 0.19205298013245034,
+      "mae": 0.8589702844619751,
+      "pearson": 0.3865569226657774
+    }
+  },
+  "provenance": {
+    "checkpoint": "/data1/E题/MOSEI-ARE/problem2/outputs/_scan_C_seed_100/best.pt",
+    "checkpoint_sha256": "08673929f7a61901227f39c1d3b9f960a24f05ff8e5e2147e2999d48f52cdecd",
+    "split": "test",
+    "feature_version": "aligned_50",
+    "run_kind": "training"
+  }
+}

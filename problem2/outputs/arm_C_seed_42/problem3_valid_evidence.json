@@ -1,39 +1,34 @@
 {
-  "summary": {
-    "n": 32,
-    "accuracy": 0.40625,
-    "f1_macro": 0.3877777777777778
-  },
   "split": "valid",
   "records": [
     {
       "sample_index": 0,
       "sample_id": "-UacrmKiTn4$_$7",
       "modality_contribution": {
-        "clean_logit": 0.675791323184967,
-        "clean_intensity": 0.299567848443985,
+        "clean_logit": 3.32352614402771,
+        "clean_intensity": 0.5804188251495361,
         "clean_pred": 2,
         "polarity_delta": {
-          "text": 0.9629307389259338,
-          "audio": -0.2742743492126465,
-          "vision": -0.20867568254470825
+          "text": 0.009370803833007812,
+          "audio": 0.9844198226928711,
+          "vision": -1.2880518436431885
         },
         "intensity_delta": {
-          "text": 0.24528507888317108,
-          "audio": 0.03592595458030701,
-          "vision": -0.14311948418617249
+          "text": -0.13001024723052979,
+          "audio": 0.05148422718048096,
+          "vision": -0.38753950595855713
         },
         "normalized_magnitude": {
-          "text": 0.6659821186160986,
-          "audio": 0.18969361428261544,
-          "vision": 0.14432426710128604
+          "text": 0.004106683066650743,
+          "audio": 0.43141445369799475,
+          "vision": 0.5644788632353545
         },
-        "dominant_modality": "text"
+        "dominant_modality": "vision"
       },
       "modality_weights_auxiliary": {
-        "text": 0.40360525250434875,
-        "audio": 0.2496817260980606,
-        "vision": 0.3467130661010742
+        "text": 0.308659166097641,
+        "audio": 0.32217320799827576,
+        "vision": 0.36916762590408325
       },
       "window_evidence": {
         "text": {
@@ -42,25 +37,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.7217
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.9752
             },
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.681
+              "start_position": 11,
+              "end_position": 17,
+              "start_seconds": 2.3,
+              "end_seconds": 3.5,
+              "logit_drop": 0.8173
             },
             {
-              "start_position": 19,
-              "end_position": 25,
-              "start_seconds": 3.9,
-              "end_seconds": 5.1,
-              "logit_drop": 0.5962
+              "start_position": 12,
+              "end_position": 18,
+              "start_seconds": 2.5,
+              "end_seconds": 3.7,
+              "logit_drop": 0.7949
             }
           ]
         },
@@ -70,25 +65,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.0199
+              "start_position": 18,
+              "end_position": 24,
+              "start_seconds": 3.7,
+              "end_seconds": 4.9,
+              "logit_drop": 1.1571
             },
             {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": -0.0238
+              "start_position": 17,
+              "end_position": 23,
+              "start_seconds": 3.5,
+              "end_seconds": 4.7,
+              "logit_drop": 0.9909
             },
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": -0.0374
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.8702
             }
           ]
         },
@@ -98,25 +93,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 22,
-              "end_position": 28,
-              "start_seconds": 4.5,
-              "end_seconds": 5.7,
-              "logit_drop": 0.2365
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 0.0158
             },
             {
-              "start_position": 23,
-              "end_position": 29,
-              "start_seconds": 4.7,
-              "end_seconds": 5.9,
-              "logit_drop": 0.2336
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": 0.0001
             },
             {
-              "start_position": 24,
-              "end_position": 30,
-              "start_seconds": 4.9,
-              "end_seconds": 6.1,
-              "logit_drop": 0.1898
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": -0.0131
             }
           ]
         }
@@ -126,30 +121,30 @@
       "sample_index": 1,
       "sample_id": "-qDkUB0GgYY$_$5",
       "modality_contribution": {
-        "clean_logit": 0.9638472199440002,
-        "clean_intensity": 0.6007939577102661,
+        "clean_logit": 1.4888936281204224,
+        "clean_intensity": 0.8786102533340454,
         "clean_pred": 2,
         "polarity_delta": {
-          "text": 1.3681371212005615,
-          "audio": -2.451733112335205,
-          "vision": 1.5518949031829834
+          "text": -1.404220700263977,
+          "audio": 0.5962875485420227,
+          "vision": 1.356446385383606
         },
         "intensity_delta": {
-          "text": 0.8921182155609131,
-          "audio": -0.6254340410232544,
-          "vision": 0.743897870182991
+          "text": -0.28027939796447754,
+          "audio": 0.21493059396743774,
+          "vision": 0.48305070400238037
         },
         "normalized_magnitude": {
-          "text": 0.2546904204446035,
-          "audio": 0.45641107716649054,
-          "vision": 0.2888985023889059
+          "text": 0.4183019591514279,
+          "audio": 0.1776275265888337,
+          "vision": 0.4040705142597384
         },
-        "dominant_modality": "audio"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.33365148305892944,
-        "audio": 0.40661630034446716,
-        "vision": 0.2597322165966034
+        "text": 0.6843215227127075,
+        "audio": 0.17944404482841492,
+        "vision": 0.13623440265655518
       },
       "window_evidence": {
         "text": {
@@ -158,25 +153,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.6925
+              "start_position": 29,
+              "end_position": 35,
+              "start_seconds": 5.9,
+              "end_seconds": 7.1,
+              "logit_drop": 0.5772
             },
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.6575
+              "start_position": 32,
+              "end_position": 38,
+              "start_seconds": 6.5,
+              "end_seconds": 7.7,
+              "logit_drop": 0.5252
             },
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.6195
+              "start_position": 33,
+              "end_position": 39,
+              "start_seconds": 6.7,
+              "end_seconds": 7.9,
+              "logit_drop": 0.463
             }
           ]
         },
@@ -186,25 +181,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 18,
-              "end_position": 24,
-              "start_seconds": 3.7,
-              "end_seconds": 4.9,
-              "logit_drop": -0.0311
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.1298
             },
             {
               "start_position": 5,
               "end_position": 11,
               "start_seconds": 1.1,
               "end_seconds": 2.3,
-              "logit_drop": -0.052
+              "logit_drop": 0.1268
             },
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": -0.056
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.1151
             }
           ]
         },
@@ -214,25 +209,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 25,
-              "end_position": 31,
-              "start_seconds": 5.1,
-              "end_seconds": 6.3,
-              "logit_drop": 0.1521
-            },
-            {
               "start_position": 26,
               "end_position": 32,
               "start_seconds": 5.3,
               "end_seconds": 6.5,
-              "logit_drop": 0.1505
+              "logit_drop": 0.0464
             },
             {
-              "start_position": 23,
-              "end_position": 29,
-              "start_seconds": 4.7,
-              "end_seconds": 5.9,
-              "logit_drop": 0.1504
+              "start_position": 25,
+              "end_position": 31,
+              "start_seconds": 5.1,
+              "end_seconds": 6.3,
+              "logit_drop": 0.0368
+            },
+            {
+              "start_position": 22,
+              "end_position": 28,
+              "start_seconds": 4.5,
+              "end_seconds": 5.7,
+              "logit_drop": 0.0361
             }
           ]
         }
@@ -242,30 +237,30 @@
       "sample_index": 2,
       "sample_id": "0utROiKxejc$_$1",
       "modality_contribution": {
-        "clean_logit": 0.8084327578544617,
-        "clean_intensity": 0.29188767075538635,
+        "clean_logit": 2.163783311843872,
+        "clean_intensity": 0.49890226125717163,
         "clean_pred": 2,
         "polarity_delta": {
-          "text": 1.1660457849502563,
-          "audio": 0.21527808904647827,
-          "vision": 0.7125215530395508
+          "text": 0.5962945222854614,
+          "audio": -0.48067235946655273,
+          "vision": -0.7751295566558838
         },
         "intensity_delta": {
-          "text": 0.6511572301387787,
-          "audio": -0.025555193424224854,
-          "vision": 0.25764908641576767
+          "text": 0.2942952513694763,
+          "audio": -0.25857287645339966,
+          "vision": -0.28640007972717285
         },
         "normalized_magnitude": {
-          "text": 0.5568920083087152,
-          "audio": 0.10281469981821519,
-          "vision": 0.3402932918730696
+          "text": 0.32195651906660383,
+          "audio": 0.2595287963945058,
+          "vision": 0.41851468453889035
         },
-        "dominant_modality": "text"
+        "dominant_modality": "vision"
       },
       "modality_weights_auxiliary": {
-        "text": 0.32809141278266907,
-        "audio": 0.3014107048511505,
-        "vision": 0.3704979121685028
+        "text": 0.23728294670581818,
+        "audio": 0.21333159506320953,
+        "vision": 0.5493854880332947
       },
       "window_evidence": {
         "text": {
@@ -274,25 +269,25 @@
           "window_length": 6,
           "windows": [
             {
+              "start_position": 12,
+              "end_position": 18,
+              "start_seconds": 2.5,
+              "end_seconds": 3.7,
+              "logit_drop": 1.1008
+            },
+            {
               "start_position": 11,
               "end_position": 17,
               "start_seconds": 2.3,
               "end_seconds": 3.5,
-              "logit_drop": 0.6979
+              "logit_drop": 0.8781
             },
             {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 0.4904
-            },
-            {
-              "start_position": 8,
-              "end_position": 14,
-              "start_seconds": 1.7,
-              "end_seconds": 2.9,
-              "logit_drop": 0.4746
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.6401
             }
           ]
         },
@@ -302,25 +297,25 @@
           "window_length": 6,
           "windows": [
             {
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.2678
+            },
+            {
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 0.18
+            },
+            {
               "start_position": 0,
               "end_position": 6,
               "start_seconds": 0.1,
               "end_seconds": 1.3,
-              "logit_drop": 0.1768
-            },
-            {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.0187
-            },
-            {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": -0.0452
+              "logit_drop": 0.136
             }
           ]
         },
@@ -330,25 +325,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": 0.6135
+              "start_position": 9,
+              "end_position": 15,
+              "start_seconds": 1.9,
+              "end_seconds": 3.1,
+              "logit_drop": 0.6412
             },
             {
-              "start_position": 4,
-              "end_position": 10,
-              "start_seconds": 0.9,
-              "end_seconds": 2.1,
-              "logit_drop": 0.5862
+              "start_position": 10,
+              "end_position": 16,
+              "start_seconds": 2.1,
+              "end_seconds": 3.3,
+              "logit_drop": 0.4994
             },
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.5856
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.4309
             }
           ]
         }
@@ -358,30 +353,30 @@
       "sample_index": 3,
       "sample_id": "0utROiKxejc$_$4",
       "modality_contribution": {
-        "clean_logit": 1.0785216093063354,
-        "clean_intensity": -0.635960042476654,
+        "clean_logit": 1.545691728591919,
+        "clean_intensity": -0.6995309591293335,
         "clean_pred": 0,
         "polarity_delta": {
-          "text": 1.009265422821045,
-          "audio": 0.17925411462783813,
-          "vision": -1.215755820274353
+          "text": 2.3008663654327393,
+          "audio": -0.1199415922164917,
+          "vision": 0.8942023515701294
         },
         "intensity_delta": {
-          "text": -0.7645439803600311,
-          "audio": -0.14051401615142822,
-          "vision": 0.5541031956672668
+          "text": -0.9887876808643341,
+          "audio": 0.14722859859466553,
+          "vision": -0.4938679337501526
         },
         "normalized_magnitude": {
-          "text": 0.4197794647684547,
-          "audio": 0.07455639972851756,
-          "vision": 0.5056641355030278
+          "text": 0.6940751764885347,
+          "audio": 0.03618136326240756,
+          "vision": 0.2697434602490578
         },
-        "dominant_modality": "vision"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.2508116364479065,
-        "audio": 0.1908789426088333,
-        "vision": 0.5583094954490662
+        "text": 0.28830981254577637,
+        "audio": 0.15754453837871552,
+        "vision": 0.5541456341743469
       },
       "window_evidence": {
         "text": {
@@ -390,25 +385,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 16,
-              "end_position": 22,
-              "start_seconds": 3.3,
-              "end_seconds": 4.5,
-              "logit_drop": 0.6141
-            },
-            {
               "start_position": 17,
               "end_position": 23,
               "start_seconds": 3.5,
               "end_seconds": 4.7,
-              "logit_drop": 0.5821
+              "logit_drop": 3.3157
             },
             {
               "start_position": 18,
               "end_position": 24,
               "start_seconds": 3.7,
               "end_seconds": 4.9,
-              "logit_drop": 0.5555
+              "logit_drop": 3.3147
+            },
+            {
+              "start_position": 19,
+              "end_position": 25,
+              "start_seconds": 3.9,
+              "end_seconds": 5.1,
+              "logit_drop": 3.2512
             }
           ]
         },
@@ -422,21 +417,21 @@
               "end_position": 26,
               "start_seconds": 4.1,
               "end_seconds": 5.3,
-              "logit_drop": 0.2954
-            },
-            {
-              "start_position": 21,
-              "end_position": 27,
-              "start_seconds": 4.3,
-              "end_seconds": 5.5,
-              "logit_drop": 0.2696
+              "logit_drop": 0.7177
             },
             {
               "start_position": 19,
               "end_position": 25,
               "start_seconds": 3.9,
               "end_seconds": 5.1,
-              "logit_drop": 0.2549
+              "logit_drop": 0.6945
+            },
+            {
+              "start_position": 18,
+              "end_position": 24,
+              "start_seconds": 3.7,
+              "end_seconds": 4.9,
+              "logit_drop": 0.6301
             }
           ]
         },
@@ -446,25 +441,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 27,
-              "end_position": 33,
-              "start_seconds": 5.5,
-              "end_seconds": 6.7,
-              "logit_drop": 0.1742
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.5353
             },
             {
-              "start_position": 20,
-              "end_position": 26,
-              "start_seconds": 4.1,
-              "end_seconds": 5.3,
-              "logit_drop": 0.1736
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.5188
             },
             {
-              "start_position": 28,
-              "end_position": 34,
-              "start_seconds": 5.7,
-              "end_seconds": 6.9,
-              "logit_drop": 0.1662
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.4572
             }
           ]
         }
@@ -474,113 +469,113 @@
       "sample_index": 4,
       "sample_id": "0y022OlZ3W0$_$3",
       "modality_contribution": {
-        "clean_logit": 1.6341135501861572,
-        "clean_intensity": -0.7928504943847656,
-        "clean_pred": 0,
+        "clean_logit": 0.7025863528251648,
+        "clean_intensity": 0.25750598311424255,
+        "clean_pred": 2,
         "polarity_delta": {
-          "text": 0.41878175735473633,
-          "audio": 1.093644618988037,
-          "vision": -0.38473057746887207
+          "text": 1.1351996660232544,
+          "audio": 0.10641241073608398,
+          "vision": 0.5678389668464661
         },
         "intensity_delta": {
-          "text": -0.24483877420425415,
-          "audio": -0.5849446505308151,
-          "vision": 0.10366195440292358
+          "text": 0.7308208644390106,
+          "audio": -0.05346909165382385,
+          "vision": 0.09226776659488678
         },
         "normalized_magnitude": {
-          "text": 0.22074175598036155,
-          "audio": 0.5764650187696684,
-          "vision": 0.20279322524997007
+          "text": 0.6273724122212625,
+          "audio": 0.05880922344493467,
+          "vision": 0.31381836433380284
         },
-        "dominant_modality": "audio"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.29280388355255127,
-        "audio": 0.3076126277446747,
-        "vision": 0.39958345890045166
+        "text": 0.3526366055011749,
+        "audio": 0.18052451312541962,
+        "vision": 0.46683886647224426
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 0,
+          "target_class": 2,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 1.9663
+              "start_position": 16,
+              "end_position": 22,
+              "start_seconds": 3.3,
+              "end_seconds": 4.5,
+              "logit_drop": 2.2559
+            },
+            {
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 2.0963
+            },
+            {
+              "start_position": 15,
+              "end_position": 21,
+              "start_seconds": 3.1,
+              "end_seconds": 4.3,
+              "logit_drop": 2.0859
+            }
+          ]
+        },
+        "audio": {
+          "modality": "audio",
+          "target_class": 2,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.2431
+            },
+            {
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.2295
+            },
+            {
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.1608
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 2,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": 0.7493
+            },
+            {
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.7213
             },
             {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": 1.8725
-            },
-            {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 1.7044
-            }
-          ]
-        },
-        "audio": {
-          "modality": "audio",
-          "target_class": 0,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 0.5894
-            },
-            {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 0.514
-            },
-            {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": 0.5033
-            }
-          ]
-        },
-        "vision": {
-          "modality": "vision",
-          "target_class": 0,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 17,
-              "end_position": 23,
-              "start_seconds": 3.5,
-              "end_seconds": 4.7,
-              "logit_drop": -0.0016
-            },
-            {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": -0.0164
-            },
-            {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": -0.0165
+              "logit_drop": 0.6885
             }
           ]
         }
@@ -590,30 +585,30 @@
       "sample_index": 5,
       "sample_id": "0y022OlZ3W0$_$5",
       "modality_contribution": {
-        "clean_logit": 2.202213764190674,
-        "clean_intensity": -0.8344629406929016,
+        "clean_logit": 1.2105392217636108,
+        "clean_intensity": -0.4024180769920349,
         "clean_pred": 0,
         "polarity_delta": {
-          "text": 0.32579362392425537,
-          "audio": 1.6285209655761719,
-          "vision": -0.1747739315032959
+          "text": 1.4039397239685059,
+          "audio": 0.16142117977142334,
+          "vision": 0.17233812808990479
         },
         "intensity_delta": {
-          "text": -0.18206548690795898,
-          "audio": -0.6822549402713776,
-          "vision": 0.22742551565170288
+          "text": -0.5055173859000206,
+          "audio": -0.07669073343276978,
+          "vision": -0.08686435222625732
         },
         "normalized_magnitude": {
-          "text": 0.15302023410969565,
-          "audio": 0.7648911491986407,
-          "vision": 0.08208861669166374
+          "text": 0.8079303137380053,
+          "audio": 0.09289363509712231,
+          "vision": 0.09917605116487237
         },
-        "dominant_modality": "audio"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.2234521061182022,
-        "audio": 0.3502746522426605,
-        "vision": 0.4262732267379761
+        "text": 0.20366646349430084,
+        "audio": 0.21768710017204285,
+        "vision": 0.5786464810371399
       },
       "window_evidence": {
         "text": {
@@ -622,25 +617,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": 1.0249
+              "start_position": 6,
+              "end_position": 12,
+              "start_seconds": 1.3,
+              "end_seconds": 2.5,
+              "logit_drop": 1.8445
             },
             {
               "start_position": 2,
               "end_position": 8,
               "start_seconds": 0.5,
               "end_seconds": 1.7,
-              "logit_drop": 1.0058
+              "logit_drop": 1.4846
             },
             {
-              "start_position": 4,
-              "end_position": 10,
-              "start_seconds": 0.9,
-              "end_seconds": 2.1,
-              "logit_drop": 0.9279
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 1.3938
             }
           ]
         },
@@ -650,25 +645,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 16,
-              "end_position": 22,
-              "start_seconds": 3.3,
-              "end_seconds": 4.5,
-              "logit_drop": 0.3348
-            },
-            {
-              "start_position": 17,
-              "end_position": 23,
-              "start_seconds": 3.5,
-              "end_seconds": 4.7,
-              "logit_drop": 0.2906
-            },
-            {
               "start_position": 15,
               "end_position": 21,
               "start_seconds": 3.1,
               "end_seconds": 4.3,
-              "logit_drop": 0.2737
+              "logit_drop": 0.2934
+            },
+            {
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": 0.2658
+            },
+            {
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.2629
             }
           ]
         },
@@ -678,25 +673,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 0.1704
+              "start_position": 21,
+              "end_position": 27,
+              "start_seconds": 4.3,
+              "end_seconds": 5.5,
+              "logit_drop": 0.0586
             },
             {
-              "start_position": 12,
-              "end_position": 18,
-              "start_seconds": 2.5,
-              "end_seconds": 3.7,
-              "logit_drop": 0.1598
+              "start_position": 20,
+              "end_position": 26,
+              "start_seconds": 4.1,
+              "end_seconds": 5.3,
+              "logit_drop": 0.0348
             },
             {
-              "start_position": 13,
-              "end_position": 19,
-              "start_seconds": 2.7,
-              "end_seconds": 3.9,
-              "logit_drop": 0.1511
+              "start_position": 22,
+              "end_position": 28,
+              "start_seconds": 4.5,
+              "end_seconds": 5.7,
+              "logit_drop": 0.0179
             }
           ]
         }
@@ -706,113 +701,113 @@
       "sample_index": 6,
       "sample_id": "0y022OlZ3W0$_$8",
       "modality_contribution": {
-        "clean_logit": 1.123978853225708,
-        "clean_intensity": -0.050779759883880615,
-        "clean_pred": 1,
+        "clean_logit": 3.6880548000335693,
+        "clean_intensity": 0.850782036781311,
+        "clean_pred": 2,
         "polarity_delta": {
-          "text": 0.48712044954299927,
-          "audio": -0.006902098655700684,
-          "vision": -0.3376317024230957
+          "text": 0.5966529846191406,
+          "audio": 1.5936501026153564,
+          "vision": 0.16219711303710938
         },
         "intensity_delta": {
-          "text": 0.19360440969467163,
-          "audio": 0.07262483239173889,
-          "vision": -0.08412034809589386
+          "text": 0.0296323299407959,
+          "audio": 0.2838701009750366,
+          "vision": 0.052165210247039795
         },
         "normalized_magnitude": {
-          "text": 0.5857247157443111,
-          "audio": 0.008299240520372802,
-          "vision": 0.40597604373531615
+          "text": 0.25362505157289866,
+          "audio": 0.6774282537495055,
+          "vision": 0.06894669467759577
         },
-        "dominant_modality": "text"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.2490227371454239,
-        "audio": 0.24181810021400452,
-        "vision": 0.5091591477394104
+        "text": 0.23724526166915894,
+        "audio": 0.5548999905586243,
+        "vision": 0.20785480737686157
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 1,
+          "target_class": 2,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.7374
+              "start_position": 12,
+              "end_position": 18,
+              "start_seconds": 2.5,
+              "end_seconds": 3.7,
+              "logit_drop": 0.6208
             },
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.6619
-            },
-            {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.5541
-            }
-          ]
-        },
-        "audio": {
-          "modality": "audio",
-          "target_class": 1,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.5915
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.5812
             },
             {
               "start_position": 7,
               "end_position": 13,
               "start_seconds": 1.5,
               "end_seconds": 2.7,
-              "logit_drop": 0.5604
-            },
-            {
-              "start_position": 8,
-              "end_position": 14,
-              "start_seconds": 1.7,
-              "end_seconds": 2.9,
-              "logit_drop": 0.4872
+              "logit_drop": 0.4719
             }
           ]
         },
-        "vision": {
-          "modality": "vision",
-          "target_class": 1,
+        "audio": {
+          "modality": "audio",
+          "target_class": 2,
           "window_length": 6,
           "windows": [
-            {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": 0.0542
-            },
             {
               "start_position": 10,
               "end_position": 16,
               "start_seconds": 2.1,
               "end_seconds": 3.3,
-              "logit_drop": 0.0516
+              "logit_drop": 0.518
             },
             {
-              "start_position": 8,
-              "end_position": 14,
-              "start_seconds": 1.7,
-              "end_seconds": 2.9,
-              "logit_drop": 0.0484
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": 0.4831
+            },
+            {
+              "start_position": 11,
+              "end_position": 17,
+              "start_seconds": 2.3,
+              "end_seconds": 3.5,
+              "logit_drop": 0.447
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 2,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.4039
+            },
+            {
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.3311
+            },
+            {
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 0.2513
             }
           ]
         }
@@ -822,113 +817,113 @@
       "sample_index": 7,
       "sample_id": "101787$_$11",
       "modality_contribution": {
-        "clean_logit": 0.2601046562194824,
-        "clean_intensity": -0.1703687161207199,
-        "clean_pred": 2,
+        "clean_logit": 1.2200084924697876,
+        "clean_intensity": 0.2571442127227783,
+        "clean_pred": 1,
         "polarity_delta": {
-          "text": -0.03722277283668518,
-          "audio": -0.521780252456665,
-          "vision": 0.49463245272636414
+          "text": 1.2991975545883179,
+          "audio": 0.7743545770645142,
+          "vision": -0.46926629543304443
         },
         "intensity_delta": {
-          "text": 0.11055116355419159,
-          "audio": -0.496741458773613,
-          "vision": 0.01734161376953125
+          "text": -0.38210397958755493,
+          "audio": -0.27878880500793457,
+          "vision": -0.020724773406982422
         },
         "normalized_magnitude": {
-          "text": 0.035327941791258394,
-          "audio": 0.4952189474839439,
-          "vision": 0.46945311072479773
+          "text": 0.5109281656721458,
+          "audio": 0.3045260993927674,
+          "vision": 0.18454573493508677
         },
-        "dominant_modality": "audio"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.41701945662498474,
-        "audio": 0.22384583950042725,
-        "vision": 0.3591346740722656
+        "text": 0.4537193775177002,
+        "audio": 0.3623696565628052,
+        "vision": 0.18391093611717224
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 2,
+          "target_class": 1,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 20,
-              "end_position": 26,
-              "start_seconds": 4.1,
-              "end_seconds": 5.3,
-              "logit_drop": 0.5616
-            },
-            {
-              "start_position": 19,
-              "end_position": 25,
-              "start_seconds": 3.9,
-              "end_seconds": 5.1,
-              "logit_drop": 0.5172
-            },
-            {
-              "start_position": 18,
-              "end_position": 24,
-              "start_seconds": 3.7,
-              "end_seconds": 4.9,
-              "logit_drop": 0.5105
-            }
-          ]
-        },
-        "audio": {
-          "modality": "audio",
-          "target_class": 2,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 0.5438
-            },
-            {
-              "start_position": 12,
-              "end_position": 18,
-              "start_seconds": 2.5,
-              "end_seconds": 3.7,
-              "logit_drop": 0.4463
-            },
-            {
-              "start_position": 13,
-              "end_position": 19,
-              "start_seconds": 2.7,
-              "end_seconds": 3.9,
-              "logit_drop": 0.4179
-            }
-          ]
-        },
-        "vision": {
-          "modality": "vision",
-          "target_class": 2,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.0763
+              "start_position": 15,
+              "end_position": 21,
+              "start_seconds": 3.1,
+              "end_seconds": 4.3,
+              "logit_drop": 0.7252
             },
             {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": 0.0261
+              "logit_drop": 0.7239
             },
             {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 0.0102
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 0.7165
+            }
+          ]
+        },
+        "audio": {
+          "modality": "audio",
+          "target_class": 1,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 19,
+              "end_position": 25,
+              "start_seconds": 3.9,
+              "end_seconds": 5.1,
+              "logit_drop": 0.4084
+            },
+            {
+              "start_position": 21,
+              "end_position": 27,
+              "start_seconds": 4.3,
+              "end_seconds": 5.5,
+              "logit_drop": 0.4054
+            },
+            {
+              "start_position": 20,
+              "end_position": 26,
+              "start_seconds": 4.1,
+              "end_seconds": 5.3,
+              "logit_drop": 0.3839
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 1,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 28,
+              "end_position": 34,
+              "start_seconds": 5.7,
+              "end_seconds": 6.9,
+              "logit_drop": 0.0221
+            },
+            {
+              "start_position": 30,
+              "end_position": 36,
+              "start_seconds": 6.1,
+              "end_seconds": 7.3,
+              "logit_drop": 0.0073
+            },
+            {
+              "start_position": 26,
+              "end_position": 32,
+              "start_seconds": 5.3,
+              "end_seconds": 6.5,
+              "logit_drop": 0.0019
             }
           ]
         }
@@ -938,30 +933,30 @@
       "sample_index": 8,
       "sample_id": "101787$_$13",
       "modality_contribution": {
-        "clean_logit": 0.9632370471954346,
-        "clean_intensity": 0.017474059015512466,
+        "clean_logit": 1.3111658096313477,
+        "clean_intensity": -0.49321961402893066,
         "clean_pred": 1,
         "polarity_delta": {
-          "text": 0.7242037057876587,
-          "audio": 0.13300257921218872,
-          "vision": -0.44814157485961914
+          "text": 0.7427200675010681,
+          "audio": 0.872362494468689,
+          "vision": -0.8719477653503418
         },
         "intensity_delta": {
-          "text": 0.09272671118378639,
-          "audio": 0.016794342547655106,
-          "vision": -0.09720461443066597
+          "text": -0.0748167335987091,
+          "audio": -0.5555120334029198,
+          "vision": -0.5605030059814453
         },
         "normalized_magnitude": {
-          "text": 0.5547974820027102,
-          "audio": 0.1018905253550634,
-          "vision": 0.3433119926422264
+          "text": 0.29863731830780954,
+          "audio": 0.3507647192258824,
+          "vision": 0.35059796246630803
         },
-        "dominant_modality": "text"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3652956187725067,
-        "audio": 0.35577717423439026,
-        "vision": 0.2789272367954254
+        "text": 0.42682188749313354,
+        "audio": 0.29777079820632935,
+        "vision": 0.2754072844982147
       },
       "window_evidence": {
         "text": {
@@ -970,25 +965,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.7005
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.7918
             },
             {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.688
+              "start_position": 15,
+              "end_position": 21,
+              "start_seconds": 3.1,
+              "end_seconds": 4.3,
+              "logit_drop": 0.7736
             },
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 0.6877
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.7628
             }
           ]
         },
@@ -1002,21 +997,21 @@
               "end_position": 20,
               "start_seconds": 2.9,
               "end_seconds": 4.1,
-              "logit_drop": 0.3002
+              "logit_drop": 0.325
             },
             {
-              "start_position": 15,
-              "end_position": 21,
-              "start_seconds": 3.1,
-              "end_seconds": 4.3,
-              "logit_drop": 0.2933
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.3063
             },
             {
-              "start_position": 16,
-              "end_position": 22,
-              "start_seconds": 3.3,
-              "end_seconds": 4.5,
-              "logit_drop": 0.2563
+              "start_position": 12,
+              "end_position": 18,
+              "start_seconds": 2.5,
+              "end_seconds": 3.7,
+              "logit_drop": 0.3024
             }
           ]
         },
@@ -1026,25 +1021,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.0579
+              "start_position": 11,
+              "end_position": 17,
+              "start_seconds": 2.3,
+              "end_seconds": 3.5,
+              "logit_drop": 0.0789
             },
             {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": 0.0474
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 0.0642
             },
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.0383
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.0477
             }
           ]
         }
@@ -1054,35 +1049,63 @@
       "sample_index": 9,
       "sample_id": "101787$_$1",
       "modality_contribution": {
-        "clean_logit": 1.1819591522216797,
-        "clean_intensity": -0.6072752475738525,
-        "clean_pred": 0,
+        "clean_logit": 0.606083869934082,
+        "clean_intensity": 0.1335238814353943,
+        "clean_pred": 2,
         "polarity_delta": {
-          "text": 0.7144391536712646,
-          "audio": 0.1253366470336914,
-          "vision": 0.774052619934082
+          "text": 1.34846830368042,
+          "audio": -2.835906505584717,
+          "vision": -0.8514987230300903
         },
         "intensity_delta": {
-          "text": -0.3050261437892914,
-          "audio": -0.06231659650802612,
-          "vision": -0.4516180157661438
+          "text": 0.795853316783905,
+          "audio": -0.7861608862876892,
+          "vision": -0.4210723042488098
         },
         "normalized_magnitude": {
-          "text": 0.4426983343051819,
-          "audio": 0.07766417137706687,
-          "vision": 0.4796374943177512
+          "text": 0.2677724718527277,
+          "audio": 0.5631409302473449,
+          "vision": 0.16908659789992744
         },
-        "dominant_modality": "vision"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.2800491154193878,
-        "audio": 0.4589468240737915,
-        "vision": 0.26100409030914307
+        "text": 0.3665589392185211,
+        "audio": 0.31450530886650085,
+        "vision": 0.3189357817173004
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 0,
+          "target_class": 2,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": 1.322
+            },
+            {
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": 0.6248
+            },
+            {
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.5746
+            }
+          ]
+        },
+        "audio": {
+          "modality": "audio",
+          "target_class": 2,
           "window_length": 6,
           "windows": [
             {
@@ -1090,77 +1113,49 @@
               "end_position": 13,
               "start_seconds": 1.5,
               "end_seconds": 2.7,
-              "logit_drop": 0.8485
+              "logit_drop": 0.3248
             },
             {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.6418
-            },
-            {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.6278
-            }
-          ]
-        },
-        "audio": {
-          "modality": "audio",
-          "target_class": 0,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 13,
-              "end_position": 19,
-              "start_seconds": 2.7,
-              "end_seconds": 3.9,
-              "logit_drop": 0.1822
-            },
-            {
-              "start_position": 14,
-              "end_position": 20,
-              "start_seconds": 2.9,
-              "end_seconds": 4.1,
-              "logit_drop": 0.1434
-            },
-            {
-              "start_position": 15,
-              "end_position": 21,
-              "start_seconds": 3.1,
-              "end_seconds": 4.3,
-              "logit_drop": 0.1422
-            }
-          ]
-        },
-        "vision": {
-          "modality": "vision",
-          "target_class": 0,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 0.2997
-            },
-            {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.2743
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.1289
             },
             {
               "start_position": 9,
               "end_position": 15,
               "start_seconds": 1.9,
               "end_seconds": 3.1,
-              "logit_drop": 0.2619
+              "logit_drop": 0.0497
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 2,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 16,
+              "end_position": 22,
+              "start_seconds": 3.3,
+              "end_seconds": 4.5,
+              "logit_drop": 0.0774
+            },
+            {
+              "start_position": 15,
+              "end_position": 21,
+              "start_seconds": 3.1,
+              "end_seconds": 4.3,
+              "logit_drop": 0.0714
+            },
+            {
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.0132
             }
           ]
         }
@@ -1170,30 +1165,30 @@
       "sample_index": 10,
       "sample_id": "101787$_$5",
       "modality_contribution": {
-        "clean_logit": 2.2852940559387207,
-        "clean_intensity": -1.151412010192871,
+        "clean_logit": 0.8210656642913818,
+        "clean_intensity": -0.3737717866897583,
         "clean_pred": 0,
         "polarity_delta": {
-          "text": 1.9628958702087402,
-          "audio": -0.2570478916168213,
-          "vision": 0.6448426246643066
+          "text": 1.1398954391479492,
+          "audio": 0.0452231764793396,
+          "vision": 0.20276904106140137
         },
         "intensity_delta": {
-          "text": -1.1030879691243172,
-          "audio": 0.011316418647766113,
-          "vision": -0.4459914565086365
+          "text": -0.6127369701862335,
+          "audio": 0.04999089241027832,
+          "vision": -0.11321207880973816
         },
         "normalized_magnitude": {
-          "text": 0.6851805354373435,
-          "audio": 0.08972672197446942,
-          "vision": 0.22509274258818712
+          "text": 0.8213167929366729,
+          "audio": 0.0325841765804272,
+          "vision": 0.14609903048289982
         },
         "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3410164713859558,
-        "audio": 0.32572340965270996,
-        "vision": 0.33326011896133423
+        "text": 0.3237268030643463,
+        "audio": 0.4906149208545685,
+        "vision": 0.1856582909822464
       },
       "window_evidence": {
         "text": {
@@ -1206,21 +1201,21 @@
               "end_position": 16,
               "start_seconds": 2.1,
               "end_seconds": 3.3,
-              "logit_drop": 3.0174
+              "logit_drop": 1.7145
             },
             {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 2.9613
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 1.5994
             },
             {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": 2.6783
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 1.4208
             }
           ]
         },
@@ -1230,25 +1225,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 16,
-              "end_position": 22,
-              "start_seconds": 3.3,
-              "end_seconds": 4.5,
-              "logit_drop": 0.1549
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 1.1152
             },
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.1004
+              "start_position": 10,
+              "end_position": 16,
+              "start_seconds": 2.1,
+              "end_seconds": 3.3,
+              "logit_drop": 0.9035
             },
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.0689
+              "start_position": 12,
+              "end_position": 18,
+              "start_seconds": 2.5,
+              "end_seconds": 3.7,
+              "logit_drop": 0.8734
             }
           ]
         },
@@ -1258,25 +1253,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.4775
-            },
-            {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.4658
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 0.3008
             },
             {
               "start_position": 3,
               "end_position": 9,
               "start_seconds": 0.7,
               "end_seconds": 1.9,
-              "logit_drop": 0.4655
+              "logit_drop": 0.2958
+            },
+            {
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.2945
             }
           ]
         }
@@ -1286,30 +1281,30 @@
       "sample_index": 11,
       "sample_id": "101787$_$7",
       "modality_contribution": {
-        "clean_logit": 1.751747488975525,
-        "clean_intensity": -1.0283242464065552,
+        "clean_logit": 2.2441763877868652,
+        "clean_intensity": -0.9322447776794434,
         "clean_pred": 0,
         "polarity_delta": {
-          "text": 0.6321293115615845,
-          "audio": 0.9344416260719299,
-          "vision": -0.1489495038986206
+          "text": 0.7239084243774414,
+          "audio": 2.7242090702056885,
+          "vision": 0.286684513092041
         },
         "intensity_delta": {
-          "text": -0.3231053948402405,
-          "audio": -0.48678410053253174,
-          "vision": -0.30892908573150635
+          "text": -0.26329004764556885,
+          "audio": -0.9440290313214064,
+          "vision": -0.27635109424591064
         },
         "normalized_magnitude": {
-          "text": 0.3684767002817107,
-          "audio": 0.5446986252389847,
-          "vision": 0.08682467447930464
+          "text": 0.19382779137683337,
+          "audio": 0.7294119111554849,
+          "vision": 0.07676029746768172
         },
         "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.29829826951026917,
-        "audio": 0.4158993661403656,
-        "vision": 0.28580236434936523
+        "text": 0.32516223192214966,
+        "audio": 0.27291831374168396,
+        "vision": 0.40191948413848877
       },
       "window_evidence": {
         "text": {
@@ -1318,25 +1313,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 1.3072
-            },
-            {
               "start_position": 0,
               "end_position": 6,
               "start_seconds": 0.1,
               "end_seconds": 1.3,
-              "logit_drop": 0.7882
+              "logit_drop": 0.6849
             },
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.4097
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": 0.2428
+            },
+            {
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.2173
             }
           ]
         },
@@ -1346,25 +1341,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 1.1903
-            },
-            {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": 1.0436
+              "logit_drop": 2.0731
+            },
+            {
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": 1.6957
             },
             {
               "start_position": 0,
               "end_position": 6,
               "start_seconds": 0.1,
               "end_seconds": 1.3,
-              "logit_drop": 0.6064
+              "logit_drop": 1.5037
             }
           ]
         },
@@ -1374,25 +1369,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.1471
-            },
-            {
               "start_position": 4,
               "end_position": 10,
               "start_seconds": 0.9,
               "end_seconds": 2.1,
-              "logit_drop": 0.0619
+              "logit_drop": 0.8141
             },
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": -0.0248
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.7213
+            },
+            {
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 0.6768
             }
           ]
         }
@@ -1402,30 +1397,30 @@
       "sample_index": 12,
       "sample_id": "101787$_$9",
       "modality_contribution": {
-        "clean_logit": 0.6430502533912659,
-        "clean_intensity": -0.6255764961242676,
+        "clean_logit": 0.7149850726127625,
+        "clean_intensity": -0.32882407307624817,
         "clean_pred": 0,
         "polarity_delta": {
-          "text": 0.8540036082267761,
-          "audio": 0.6003149151802063,
-          "vision": -1.1636459827423096
+          "text": 1.6892471313476562,
+          "audio": 0.8993408679962158,
+          "vision": -0.7809526324272156
         },
         "intensity_delta": {
-          "text": -0.56295395642519,
-          "audio": -0.3971240818500519,
-          "vision": 0.22565436363220215
+          "text": -0.9056500494480133,
+          "audio": -0.3334816414862871,
+          "vision": 0.0870864987373352
         },
         "normalized_magnitude": {
-          "text": 0.3262090094120152,
-          "audio": 0.22930597942414302,
-          "vision": 0.44448501116384176
+          "text": 0.5013286129924954,
+          "audio": 0.2669031082505472,
+          "vision": 0.23176827875695732
         },
-        "dominant_modality": "vision"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.33110690116882324,
-        "audio": 0.3855265974998474,
-        "vision": 0.28336650133132935
+        "text": 0.3840433359146118,
+        "audio": 0.44248297810554504,
+        "vision": 0.17347374558448792
       },
       "window_evidence": {
         "text": {
@@ -1434,25 +1429,25 @@
           "window_length": 6,
           "windows": [
             {
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 1.6149
+            },
+            {
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 1.4734
+            },
+            {
               "start_position": 6,
               "end_position": 12,
               "start_seconds": 1.3,
               "end_seconds": 2.5,
-              "logit_drop": 1.2835
-            },
-            {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 1.2758
-            },
-            {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": 1.1999
+              "logit_drop": 1.3777
             }
           ]
         },
@@ -1462,25 +1457,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 0.6377
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.7943
             },
             {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.6357
+              "start_position": 15,
+              "end_position": 21,
+              "start_seconds": 3.1,
+              "end_seconds": 4.3,
+              "logit_drop": 0.6292
             },
             {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.5756
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.6204
             }
           ]
         },
@@ -1490,25 +1485,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 19,
-              "end_position": 25,
-              "start_seconds": 3.9,
-              "end_seconds": 5.1,
-              "logit_drop": -0.0249
+              "start_position": 16,
+              "end_position": 22,
+              "start_seconds": 3.3,
+              "end_seconds": 4.5,
+              "logit_drop": 0.2109
             },
             {
-              "start_position": 18,
-              "end_position": 24,
-              "start_seconds": 3.7,
-              "end_seconds": 4.9,
-              "logit_drop": -0.0729
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.2074
             },
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": -0.0971
+              "start_position": 15,
+              "end_position": 21,
+              "start_seconds": 3.1,
+              "end_seconds": 4.3,
+              "logit_drop": 0.2054
             }
           ]
         }
@@ -1518,91 +1513,63 @@
       "sample_index": 13,
       "sample_id": "102408$_$2",
       "modality_contribution": {
-        "clean_logit": 1.753437876701355,
-        "clean_intensity": -1.1630362272262573,
-        "clean_pred": 0,
+        "clean_logit": 1.3812651634216309,
+        "clean_intensity": 0.20434007048606873,
+        "clean_pred": 1,
         "polarity_delta": {
-          "text": 1.9119844436645508,
-          "audio": 1.0106406211853027,
-          "vision": -1.2312341928482056
+          "text": 0.5270599126815796,
+          "audio": -0.08876359462738037,
+          "vision": 0.3627113103866577
         },
         "intensity_delta": {
-          "text": -1.2833358645439148,
-          "audio": -0.6310874223709106,
-          "vision": 0.31892096996307373
+          "text": -0.6656514704227448,
+          "audio": 0.5514825582504272,
+          "vision": 0.2347249612212181
         },
         "normalized_magnitude": {
-          "text": 0.4602910992039999,
-          "audio": 0.2433016042400456,
-          "vision": 0.2964072965559545
+          "text": 0.5386215218409597,
+          "audio": 0.09071071669826991,
+          "vision": 0.37066776146077046
         },
         "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3219160735607147,
-        "audio": 0.4333461821079254,
-        "vision": 0.24473774433135986
+        "text": 0.3417222499847412,
+        "audio": 0.5128955841064453,
+        "vision": 0.14538221061229706
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 0,
+          "target_class": 1,
           "window_length": 6,
           "windows": [
-            {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 2.5174
-            },
             {
               "start_position": 3,
               "end_position": 9,
               "start_seconds": 0.7,
               "end_seconds": 1.9,
-              "logit_drop": 2.2741
+              "logit_drop": 0.2562
             },
-            {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 1.9213
-            }
-          ]
-        },
-        "audio": {
-          "modality": "audio",
-          "target_class": 0,
-          "window_length": 6,
-          "windows": [
             {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": 0.811
+              "logit_drop": 0.2043
             },
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.7829
-            },
-            {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": 0.6766
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.1901
             }
           ]
         },
-        "vision": {
-          "modality": "vision",
-          "target_class": 0,
+        "audio": {
+          "modality": "audio",
+          "target_class": 1,
           "window_length": 6,
           "windows": [
             {
@@ -1610,21 +1577,49 @@
               "end_position": 13,
               "start_seconds": 1.5,
               "end_seconds": 2.7,
-              "logit_drop": -0.1301
+              "logit_drop": 0.211
             },
             {
               "start_position": 6,
               "end_position": 12,
               "start_seconds": 1.3,
               "end_seconds": 2.5,
-              "logit_drop": -0.212
+              "logit_drop": -0.0686
             },
             {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": -0.2769
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": -0.1691
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 1,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": 0.442
+            },
+            {
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.4311
+            },
+            {
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.3895
             }
           ]
         }
@@ -1634,30 +1629,30 @@
       "sample_index": 14,
       "sample_id": "102408$_$5",
       "modality_contribution": {
-        "clean_logit": 0.7822235226631165,
-        "clean_intensity": 0.38672345876693726,
+        "clean_logit": 2.2423245906829834,
+        "clean_intensity": 0.776613712310791,
         "clean_pred": 2,
         "polarity_delta": {
-          "text": -0.5782786011695862,
-          "audio": 0.21090275049209595,
-          "vision": 0.6118196249008179
+          "text": -1.3277647495269775,
+          "audio": 1.563550591468811,
+          "vision": 0.29986023902893066
         },
         "intensity_delta": {
-          "text": -0.1945858597755432,
-          "audio": 0.0880919098854065,
-          "vision": 0.5930331349372864
+          "text": -0.29861998558044434,
+          "audio": 0.5602252185344696,
+          "vision": 0.07847529649734497
         },
         "normalized_magnitude": {
-          "text": 0.4127610264686983,
-          "audio": 0.1505371902092228,
-          "vision": 0.43670178332207893
+          "text": 0.4160738625095309,
+          "audio": 0.4899606907422811,
+          "vision": 0.09396544674818799
         },
-        "dominant_modality": "vision"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.243295818567276,
-        "audio": 0.41249796748161316,
-        "vision": 0.34420618414878845
+        "text": 0.30849403142929077,
+        "audio": 0.45352664589881897,
+        "vision": 0.23797936737537384
       },
       "window_evidence": {
         "text": {
@@ -1666,25 +1661,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 12,
-              "end_position": 18,
-              "start_seconds": 2.5,
-              "end_seconds": 3.7,
-              "logit_drop": 0.129
+              "start_position": 10,
+              "end_position": 16,
+              "start_seconds": 2.1,
+              "end_seconds": 3.3,
+              "logit_drop": 0.6392
             },
             {
-              "start_position": 15,
-              "end_position": 21,
-              "start_seconds": 3.1,
-              "end_seconds": 4.3,
-              "logit_drop": 0.0679
+              "start_position": 11,
+              "end_position": 17,
+              "start_seconds": 2.3,
+              "end_seconds": 3.5,
+              "logit_drop": 0.5774
             },
             {
-              "start_position": 13,
-              "end_position": 19,
-              "start_seconds": 2.7,
-              "end_seconds": 3.9,
-              "logit_drop": 0.0326
+              "start_position": 9,
+              "end_position": 15,
+              "start_seconds": 1.9,
+              "end_seconds": 3.1,
+              "logit_drop": 0.4867
             }
           ]
         },
@@ -1694,25 +1689,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 18,
-              "end_position": 24,
-              "start_seconds": 3.7,
-              "end_seconds": 4.9,
-              "logit_drop": 0.0563
+              "start_position": 22,
+              "end_position": 28,
+              "start_seconds": 4.5,
+              "end_seconds": 5.7,
+              "logit_drop": 0.4
             },
             {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.0483
+              "start_position": 21,
+              "end_position": 27,
+              "start_seconds": 4.3,
+              "end_seconds": 5.5,
+              "logit_drop": 0.3875
             },
             {
-              "start_position": 17,
-              "end_position": 23,
-              "start_seconds": 3.5,
-              "end_seconds": 4.7,
-              "logit_drop": 0.0361
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.3712
             }
           ]
         },
@@ -1722,25 +1717,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.1866
-            },
-            {
               "start_position": 2,
               "end_position": 8,
               "start_seconds": 0.5,
               "end_seconds": 1.7,
-              "logit_drop": 0.1699
+              "logit_drop": 0.1892
             },
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.1495
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.1813
+            },
+            {
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": 0.1689
             }
           ]
         }
@@ -1750,113 +1745,113 @@
       "sample_index": 15,
       "sample_id": "102408$_$9",
       "modality_contribution": {
-        "clean_logit": 0.16059830784797668,
-        "clean_intensity": -0.2751639485359192,
-        "clean_pred": 0,
+        "clean_logit": 0.5510648488998413,
+        "clean_intensity": -0.009616315364837646,
+        "clean_pred": 2,
         "polarity_delta": {
-          "text": 1.628257393836975,
-          "audio": 0.057298608124256134,
-          "vision": -1.3504326343536377
+          "text": -3.323190689086914,
+          "audio": 1.589034080505371,
+          "vision": 0.7261905670166016
         },
         "intensity_delta": {
-          "text": -1.0536949634552002,
-          "audio": -0.1729138344526291,
-          "vision": 0.5909077525138855
+          "text": -1.3581623435020447,
+          "audio": 0.8889378905296326,
+          "vision": -0.024533409625291824
         },
         "normalized_magnitude": {
-          "text": 0.5363186720663684,
-          "audio": 0.01887312997119979,
-          "vision": 0.4448081979624318
+          "text": 0.5893838056785616,
+          "audio": 0.281822814681308,
+          "vision": 0.12879337964013032
         },
         "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.2825894355773926,
-        "audio": 0.4937548339366913,
-        "vision": 0.22365570068359375
+        "text": 0.4310464560985565,
+        "audio": 0.4873421788215637,
+        "vision": 0.08161143958568573
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 0,
+          "target_class": 2,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.6498
+              "start_position": 30,
+              "end_position": 36,
+              "start_seconds": 6.1,
+              "end_seconds": 7.3,
+              "logit_drop": -0.0287
             },
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 0.4972
+              "start_position": 29,
+              "end_position": 35,
+              "start_seconds": 5.9,
+              "end_seconds": 7.1,
+              "logit_drop": -0.0481
             },
             {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.4898
+              "start_position": 28,
+              "end_position": 34,
+              "start_seconds": 5.7,
+              "end_seconds": 6.9,
+              "logit_drop": -0.1088
             }
           ]
         },
         "audio": {
           "modality": "audio",
-          "target_class": 0,
+          "target_class": 2,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 20,
-              "end_position": 26,
-              "start_seconds": 4.1,
-              "end_seconds": 5.3,
-              "logit_drop": 0.1526
+              "start_position": 24,
+              "end_position": 30,
+              "start_seconds": 4.9,
+              "end_seconds": 6.1,
+              "logit_drop": 0.7971
             },
             {
-              "start_position": 18,
-              "end_position": 24,
-              "start_seconds": 3.7,
-              "end_seconds": 4.9,
-              "logit_drop": 0.1465
+              "start_position": 23,
+              "end_position": 29,
+              "start_seconds": 4.7,
+              "end_seconds": 5.9,
+              "logit_drop": 0.7343
             },
             {
-              "start_position": 17,
-              "end_position": 23,
-              "start_seconds": 3.5,
-              "end_seconds": 4.7,
-              "logit_drop": 0.1418
+              "start_position": 19,
+              "end_position": 25,
+              "start_seconds": 3.9,
+              "end_seconds": 5.1,
+              "logit_drop": 0.6269
             }
           ]
         },
         "vision": {
           "modality": "vision",
-          "target_class": 0,
+          "target_class": 2,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.0306
+              "start_position": 21,
+              "end_position": 27,
+              "start_seconds": 4.3,
+              "end_seconds": 5.5,
+              "logit_drop": 0.0093
             },
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 0.0293
+              "start_position": 24,
+              "end_position": 30,
+              "start_seconds": 4.9,
+              "end_seconds": 6.1,
+              "logit_drop": 0.009
             },
             {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.0283
+              "start_position": 29,
+              "end_position": 35,
+              "start_seconds": 5.9,
+              "end_seconds": 7.1,
+              "logit_drop": 0.0049
             }
           ]
         }
@@ -1866,30 +1861,30 @@
       "sample_index": 16,
       "sample_id": "102858$_$20",
       "modality_contribution": {
-        "clean_logit": 1.2094420194625854,
-        "clean_intensity": -0.49185410141944885,
+        "clean_logit": 1.113603115081787,
+        "clean_intensity": -0.46182480454444885,
         "clean_pred": 0,
         "polarity_delta": {
-          "text": 0.39162296056747437,
-          "audio": 0.2671210765838623,
-          "vision": 0.5160291790962219
+          "text": 2.3298652172088623,
+          "audio": -0.6822686195373535,
+          "vision": -0.4348483085632324
         },
         "intensity_delta": {
-          "text": -0.1310099959373474,
-          "audio": -0.01487228274345398,
-          "vision": -0.19307652115821838
+          "text": -0.9626037180423737,
+          "audio": 0.2739398777484894,
+          "vision": 0.06429913640022278
         },
         "normalized_magnitude": {
-          "text": 0.3333604777085317,
-          "audio": 0.22738097267581234,
-          "vision": 0.43925854961565597
+          "text": 0.675914501146829,
+          "audio": 0.19793215942988407,
+          "vision": 0.12615333942328688
         },
-        "dominant_modality": "vision"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.20826087892055511,
-        "audio": 0.49129748344421387,
-        "vision": 0.3004416525363922
+        "text": 0.24937555193901062,
+        "audio": 0.48610562086105347,
+        "vision": 0.2645188570022583
       },
       "window_evidence": {
         "text": {
@@ -1898,25 +1893,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 1.4545
-            },
-            {
               "start_position": 6,
               "end_position": 12,
               "start_seconds": 1.3,
               "end_seconds": 2.5,
-              "logit_drop": 1.1366
+              "logit_drop": 3.0278
             },
             {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": 0.7384
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 3.0106
+            },
+            {
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 2.5422
             }
           ]
         },
@@ -1926,25 +1921,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 18,
-              "end_position": 24,
-              "start_seconds": 3.7,
-              "end_seconds": 4.9,
-              "logit_drop": 0.6035
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": -0.0198
             },
             {
-              "start_position": 19,
-              "end_position": 25,
-              "start_seconds": 3.9,
-              "end_seconds": 5.1,
-              "logit_drop": 0.5856
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": -0.0508
             },
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 0.5814
+              "start_position": 24,
+              "end_position": 30,
+              "start_seconds": 4.9,
+              "end_seconds": 6.1,
+              "logit_drop": -0.0841
             }
           ]
         },
@@ -1954,25 +1949,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.0871
+              "start_position": 11,
+              "end_position": 17,
+              "start_seconds": 2.3,
+              "end_seconds": 3.5,
+              "logit_drop": 0.2599
             },
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.0748
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.2565
             },
             {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 0.0626
+              "start_position": 9,
+              "end_position": 15,
+              "start_seconds": 1.9,
+              "end_seconds": 3.1,
+              "logit_drop": 0.207
             }
           ]
         }
@@ -1982,35 +1977,35 @@
       "sample_index": 17,
       "sample_id": "102858$_$21",
       "modality_contribution": {
-        "clean_logit": 3.3484864234924316,
-        "clean_intensity": -1.3838173151016235,
-        "clean_pred": 0,
+        "clean_logit": 1.1078979969024658,
+        "clean_intensity": -0.16996733844280243,
+        "clean_pred": 1,
         "polarity_delta": {
-          "text": 1.591606855392456,
-          "audio": 1.067641258239746,
-          "vision": 0.35769104957580566
+          "text": 0.9006112813949585,
+          "audio": 0.15047025680541992,
+          "vision": -0.6093378067016602
         },
         "intensity_delta": {
-          "text": -0.7106875777244568,
-          "audio": -0.5547432899475098,
-          "vision": -0.035604119300842285
+          "text": -0.28505682945251465,
+          "audio": -0.13655540719628334,
+          "vision": -0.0799422636628151
         },
         "normalized_magnitude": {
-          "text": 0.5275568280601488,
-          "audio": 0.3538822629437741,
-          "vision": 0.11856090899607712
+          "text": 0.5423998968453917,
+          "audio": 0.09062184036063334,
+          "vision": 0.366978262793975
         },
         "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.26713699102401733,
-        "audio": 0.29535582661628723,
-        "vision": 0.43750718235969543
+        "text": 0.33503133058547974,
+        "audio": 0.23441867530345917,
+        "vision": 0.4305500090122223
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 0,
+          "target_class": 1,
           "window_length": 6,
           "windows": [
             {
@@ -2018,77 +2013,77 @@
               "end_position": 19,
               "start_seconds": 2.7,
               "end_seconds": 3.9,
-              "logit_drop": 1.7396
-            },
-            {
-              "start_position": 14,
-              "end_position": 20,
-              "start_seconds": 2.9,
-              "end_seconds": 4.1,
-              "logit_drop": 1.702
-            },
-            {
-              "start_position": 15,
-              "end_position": 21,
-              "start_seconds": 3.1,
-              "end_seconds": 4.3,
-              "logit_drop": 1.5856
-            }
-          ]
-        },
-        "audio": {
-          "modality": "audio",
-          "target_class": 0,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 0.4902
-            },
-            {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 0.4466
+              "logit_drop": 0.5829
             },
             {
               "start_position": 12,
               "end_position": 18,
               "start_seconds": 2.5,
               "end_seconds": 3.7,
-              "logit_drop": 0.4416
+              "logit_drop": 0.5738
+            },
+            {
+              "start_position": 10,
+              "end_position": 16,
+              "start_seconds": 2.1,
+              "end_seconds": 3.3,
+              "logit_drop": 0.5349
             }
           ]
         },
-        "vision": {
-          "modality": "vision",
-          "target_class": 0,
+        "audio": {
+          "modality": "audio",
+          "target_class": 1,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 20,
-              "end_position": 26,
-              "start_seconds": 4.1,
-              "end_seconds": 5.3,
-              "logit_drop": 0.1677
+              "start_position": 17,
+              "end_position": 23,
+              "start_seconds": 3.5,
+              "end_seconds": 4.7,
+              "logit_drop": 0.2599
             },
             {
               "start_position": 19,
               "end_position": 25,
               "start_seconds": 3.9,
               "end_seconds": 5.1,
-              "logit_drop": 0.1389
+              "logit_drop": 0.251
             },
             {
-              "start_position": 21,
-              "end_position": 27,
-              "start_seconds": 4.3,
-              "end_seconds": 5.5,
-              "logit_drop": 0.1301
+              "start_position": 18,
+              "end_position": 24,
+              "start_seconds": 3.7,
+              "end_seconds": 4.9,
+              "logit_drop": 0.2419
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 1,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 19,
+              "end_position": 25,
+              "start_seconds": 3.9,
+              "end_seconds": 5.1,
+              "logit_drop": 0.1082
+            },
+            {
+              "start_position": 18,
+              "end_position": 24,
+              "start_seconds": 3.7,
+              "end_seconds": 4.9,
+              "logit_drop": 0.0938
+            },
+            {
+              "start_position": 17,
+              "end_position": 23,
+              "start_seconds": 3.5,
+              "end_seconds": 4.7,
+              "logit_drop": 0.0884
             }
           ]
         }
@@ -2098,30 +2093,30 @@
       "sample_index": 18,
       "sample_id": "102858$_$1",
       "modality_contribution": {
-        "clean_logit": 1.4638594388961792,
-        "clean_intensity": 0.10903388261795044,
+        "clean_logit": 1.880826473236084,
+        "clean_intensity": 0.39930397272109985,
         "clean_pred": 1,
         "polarity_delta": {
-          "text": 0.7927954792976379,
-          "audio": 0.44964075088500977,
-          "vision": -0.3462686538696289
+          "text": 0.3764139413833618,
+          "audio": 1.8903141021728516,
+          "vision": -0.26844358444213867
         },
         "intensity_delta": {
-          "text": 0.1021108622662723,
-          "audio": 0.06442006677389145,
-          "vision": -0.04681245982646942
+          "text": 0.11724242568016052,
+          "audio": 0.02008610963821411,
+          "vision": -0.06791037321090698
         },
         "normalized_magnitude": {
-          "text": 0.4990199798942337,
-          "audio": 0.28302345854072053,
-          "vision": 0.21795656156504575
+          "text": 0.14847670951593914,
+          "audio": 0.7456355543333969,
+          "vision": 0.10588773615066395
         },
-        "dominant_modality": "text"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3497520685195923,
-        "audio": 0.37977588176727295,
-        "vision": 0.27047207951545715
+        "text": 0.2263643890619278,
+        "audio": 0.5414496064186096,
+        "vision": 0.23218600451946259
       },
       "window_evidence": {
         "text": {
@@ -2130,25 +2125,25 @@
           "window_length": 6,
           "windows": [
             {
+              "start_position": 17,
+              "end_position": 23,
+              "start_seconds": 3.5,
+              "end_seconds": 4.7,
+              "logit_drop": 0.3721
+            },
+            {
+              "start_position": 18,
+              "end_position": 24,
+              "start_seconds": 3.7,
+              "end_seconds": 4.9,
+              "logit_drop": 0.3485
+            },
+            {
               "start_position": 6,
               "end_position": 12,
               "start_seconds": 1.3,
               "end_seconds": 2.5,
-              "logit_drop": 0.783
-            },
-            {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 0.7748
-            },
-            {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": 0.7653
+              "logit_drop": 0.3238
             }
           ]
         },
@@ -2158,25 +2153,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 18,
-              "end_position": 24,
-              "start_seconds": 3.7,
-              "end_seconds": 4.9,
-              "logit_drop": 0.3983
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.7145
             },
             {
-              "start_position": 17,
-              "end_position": 23,
-              "start_seconds": 3.5,
-              "end_seconds": 4.7,
-              "logit_drop": 0.398
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.6673
             },
             {
-              "start_position": 19,
-              "end_position": 25,
-              "start_seconds": 3.9,
-              "end_seconds": 5.1,
-              "logit_drop": 0.3598
+              "start_position": 12,
+              "end_position": 18,
+              "start_seconds": 2.5,
+              "end_seconds": 3.7,
+              "logit_drop": 0.6421
             }
           ]
         },
@@ -2186,25 +2181,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 21,
-              "end_position": 27,
-              "start_seconds": 4.3,
-              "end_seconds": 5.5,
-              "logit_drop": 0.0098
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": 0.1358
             },
             {
-              "start_position": 19,
-              "end_position": 25,
-              "start_seconds": 3.9,
-              "end_seconds": 5.1,
-              "logit_drop": 0.0098
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.1289
             },
             {
-              "start_position": 20,
-              "end_position": 26,
-              "start_seconds": 4.1,
-              "end_seconds": 5.3,
-              "logit_drop": 0.0091
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": 0.1278
             }
           ]
         }
@@ -2214,63 +2209,91 @@
       "sample_index": 19,
       "sample_id": "102858$_$0",
       "modality_contribution": {
-        "clean_logit": 1.9528697729110718,
-        "clean_intensity": -0.032798219472169876,
-        "clean_pred": 1,
+        "clean_logit": 1.5821675062179565,
+        "clean_intensity": 0.3116729259490967,
+        "clean_pred": 2,
         "polarity_delta": {
-          "text": 0.4470400810241699,
-          "audio": -0.04239392280578613,
-          "vision": -0.12956225872039795
+          "text": 1.3740534782409668,
+          "audio": 1.1189035177230835,
+          "vision": 0.7995562553405762
         },
         "intensity_delta": {
-          "text": 0.5079117529094219,
-          "audio": -0.10248862579464912,
-          "vision": -0.09215955808758736
+          "text": 0.33161210268735886,
+          "audio": 0.3009369410574436,
+          "vision": 0.044502437114715576
         },
         "normalized_magnitude": {
-          "text": 0.7222015835480172,
-          "audio": 0.06848817249900192,
-          "vision": 0.2093102439529808
+          "text": 0.41732663572318546,
+          "audio": 0.3398326543650899,
+          "vision": 0.24284070991172466
         },
         "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.2935170829296112,
-        "audio": 0.44982674717903137,
-        "vision": 0.2566561996936798
+        "text": 0.260868102312088,
+        "audio": 0.46479710936546326,
+        "vision": 0.27433478832244873
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 1,
+          "target_class": 2,
           "window_length": 6,
           "windows": [
-            {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.447
-            },
             {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": 0.1888
+              "logit_drop": 1.4831
             },
             {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": 0.1566
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 1.3741
+            },
+            {
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": 0.421
             }
           ]
         },
         "audio": {
           "modality": "audio",
-          "target_class": 1,
+          "target_class": 2,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": 1.5449
+            },
+            {
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 1.515
+            },
+            {
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 1.1189
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 2,
           "window_length": 6,
           "windows": [
             {
@@ -2278,49 +2301,21 @@
               "end_position": 6,
               "start_seconds": 0.1,
               "end_seconds": 1.3,
-              "logit_drop": -0.0424
+              "logit_drop": 0.7996
             },
             {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": -0.0424
+              "logit_drop": 0.7996
             },
             {
               "start_position": 2,
               "end_position": 8,
               "start_seconds": 0.5,
               "end_seconds": 1.7,
-              "logit_drop": -0.1067
-            }
-          ]
-        },
-        "vision": {
-          "modality": "vision",
-          "target_class": 1,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": -0.0598
-            },
-            {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": -0.0965
-            },
-            {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": -0.1296
+              "logit_drop": 0.6989
             }
           ]
         }
@@ -2330,30 +2325,30 @@
       "sample_index": 20,
       "sample_id": "102858$_$4",
       "modality_contribution": {
-        "clean_logit": 2.613833427429199,
-        "clean_intensity": -1.3270033597946167,
+        "clean_logit": 2.7981486320495605,
+        "clean_intensity": -1.4422281980514526,
         "clean_pred": 0,
         "polarity_delta": {
-          "text": 1.1567686796188354,
-          "audio": 1.427245855331421,
-          "vision": -0.7425491809844971
+          "text": 3.151193618774414,
+          "audio": -0.26831650733947754,
+          "vision": -1.990990161895752
         },
         "intensity_delta": {
-          "text": -0.5756351947784424,
-          "audio": -0.6638127565383911,
-          "vision": 0.20179998874664307
+          "text": -1.4183298461139202,
+          "audio": 0.12987291812896729,
+          "vision": 0.37978172302246094
         },
         "normalized_magnitude": {
-          "text": 0.3477368174485085,
-          "audio": 0.4290450979473783,
-          "vision": 0.22321808460411321
+          "text": 0.5824218558416603,
+          "audio": 0.04959181093365821,
+          "vision": 0.3679863332246815
         },
-        "dominant_modality": "audio"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3290718197822571,
-        "audio": 0.2883661389350891,
-        "vision": 0.3825621008872986
+        "text": 0.38799360394477844,
+        "audio": 0.35072576999664307,
+        "vision": 0.2612806558609009
       },
       "window_evidence": {
         "text": {
@@ -2362,25 +2357,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 41,
-              "end_position": 47,
-              "start_seconds": 8.3,
-              "end_seconds": 9.5,
-              "logit_drop": 1.9153
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.7169
             },
             {
-              "start_position": 40,
-              "end_position": 46,
-              "start_seconds": 8.1,
-              "end_seconds": 9.3,
-              "logit_drop": 1.5621
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.6721
             },
             {
-              "start_position": 39,
-              "end_position": 45,
-              "start_seconds": 7.9,
-              "end_seconds": 9.1,
-              "logit_drop": 1.5509
+              "start_position": 31,
+              "end_position": 37,
+              "start_seconds": 6.3,
+              "end_seconds": 7.5,
+              "logit_drop": 0.5862
             }
           ]
         },
@@ -2390,25 +2385,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 25,
-              "end_position": 31,
-              "start_seconds": 5.1,
-              "end_seconds": 6.3,
-              "logit_drop": 0.166
-            },
-            {
-              "start_position": 24,
-              "end_position": 30,
-              "start_seconds": 4.9,
-              "end_seconds": 6.1,
-              "logit_drop": 0.1482
-            },
-            {
               "start_position": 43,
               "end_position": 49,
               "start_seconds": 8.7,
               "end_seconds": 9.9,
-              "logit_drop": 0.1441
+              "logit_drop": 0.2054
+            },
+            {
+              "start_position": 44,
+              "end_position": 50,
+              "start_seconds": 8.9,
+              "end_seconds": 10.1,
+              "logit_drop": 0.1721
+            },
+            {
+              "start_position": 42,
+              "end_position": 48,
+              "start_seconds": 8.5,
+              "end_seconds": 9.7,
+              "logit_drop": 0.1439
             }
           ]
         },
@@ -2418,25 +2413,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 30,
-              "end_position": 36,
-              "start_seconds": 6.1,
-              "end_seconds": 7.3,
-              "logit_drop": 0.0515
-            },
-            {
-              "start_position": 31,
-              "end_position": 37,
-              "start_seconds": 6.3,
-              "end_seconds": 7.5,
-              "logit_drop": 0.0362
-            },
-            {
               "start_position": 28,
               "end_position": 34,
               "start_seconds": 5.7,
               "end_seconds": 6.9,
-              "logit_drop": 0.0255
+              "logit_drop": 0.1109
+            },
+            {
+              "start_position": 27,
+              "end_position": 33,
+              "start_seconds": 5.5,
+              "end_seconds": 6.7,
+              "logit_drop": 0.0957
+            },
+            {
+              "start_position": 29,
+              "end_position": 35,
+              "start_seconds": 5.9,
+              "end_seconds": 7.1,
+              "logit_drop": 0.0901
             }
           ]
         }
@@ -2446,30 +2441,30 @@
       "sample_index": 21,
       "sample_id": "102858$_$6",
       "modality_contribution": {
-        "clean_logit": 0.6523840427398682,
-        "clean_intensity": 0.3578820526599884,
+        "clean_logit": 0.6038068532943726,
+        "clean_intensity": 0.22650131583213806,
         "clean_pred": 2,
         "polarity_delta": {
-          "text": 0.6552878618240356,
-          "audio": 0.24181413650512695,
-          "vision": 0.6585137844085693
+          "text": -1.5911375284194946,
+          "audio": 0.6460328698158264,
+          "vision": 1.1308751106262207
         },
         "intensity_delta": {
-          "text": 0.41807278990745544,
-          "audio": 0.09889039397239685,
-          "vision": 0.08041340112686157
+          "text": -0.30045053362846375,
+          "audio": 0.30595530569553375,
+          "vision": -0.2172294557094574
         },
         "normalized_magnitude": {
-          "text": 0.4212401732456024,
-          "audio": 0.15544592642249855,
-          "vision": 0.42331390033189903
+          "text": 0.4724216238269675,
+          "audio": 0.19181239330527836,
+          "vision": 0.33576598286775416
         },
-        "dominant_modality": "vision"
+        "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.387580931186676,
-        "audio": 0.22513073682785034,
-        "vision": 0.3872883915901184
+        "text": 0.43162834644317627,
+        "audio": 0.25371888279914856,
+        "vision": 0.31465277075767517
       },
       "window_evidence": {
         "text": {
@@ -2478,25 +2473,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 1.4509
-            },
-            {
               "start_position": 16,
               "end_position": 22,
               "start_seconds": 3.3,
               "end_seconds": 4.5,
-              "logit_drop": 1.2815
+              "logit_drop": 1.1188
             },
             {
               "start_position": 15,
               "end_position": 21,
               "start_seconds": 3.1,
               "end_seconds": 4.3,
-              "logit_drop": 1.2483
+              "logit_drop": 0.7336
+            },
+            {
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.6529
             }
           ]
         },
@@ -2506,25 +2501,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 8,
-              "end_position": 14,
-              "start_seconds": 1.7,
-              "end_seconds": 2.9,
-              "logit_drop": 1.1705
+              "start_position": 23,
+              "end_position": 29,
+              "start_seconds": 4.7,
+              "end_seconds": 5.9,
+              "logit_drop": 0.2969
             },
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 1.0881
+              "start_position": 22,
+              "end_position": 28,
+              "start_seconds": 4.5,
+              "end_seconds": 5.7,
+              "logit_drop": 0.2706
             },
             {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": 0.9608
+              "start_position": 21,
+              "end_position": 27,
+              "start_seconds": 4.3,
+              "end_seconds": 5.5,
+              "logit_drop": 0.2416
             }
           ]
         },
@@ -2534,25 +2529,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 13,
-              "end_position": 19,
-              "start_seconds": 2.7,
-              "end_seconds": 3.9,
-              "logit_drop": 0.2312
+              "start_position": 17,
+              "end_position": 23,
+              "start_seconds": 3.5,
+              "end_seconds": 4.7,
+              "logit_drop": 0.2967
             },
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": 0.2219
+              "start_position": 15,
+              "end_position": 21,
+              "start_seconds": 3.1,
+              "end_seconds": 4.3,
+              "logit_drop": 0.2863
             },
             {
-              "start_position": 14,
-              "end_position": 20,
-              "start_seconds": 2.9,
-              "end_seconds": 4.1,
-              "logit_drop": 0.2064
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.2834
             }
           ]
         }
@@ -2562,63 +2557,91 @@
       "sample_index": 22,
       "sample_id": "102858$_$10",
       "modality_contribution": {
-        "clean_logit": 2.2086024284362793,
-        "clean_intensity": -0.04320796951651573,
-        "clean_pred": 1,
+        "clean_logit": 0.9411569833755493,
+        "clean_intensity": -0.5926460027694702,
+        "clean_pred": 0,
         "polarity_delta": {
-          "text": 0.8398243188858032,
-          "audio": 0.5601904392242432,
-          "vision": -0.07792282104492188
+          "text": 1.7305376529693604,
+          "audio": -0.9215884208679199,
+          "vision": -0.9057775735855103
         },
         "intensity_delta": {
-          "text": 0.21690816059708595,
-          "audio": -0.0667426623404026,
-          "vision": -0.07000619173049927
+          "text": -0.8406224846839905,
+          "audio": 0.3617832064628601,
+          "vision": 0.2142113447189331
         },
         "normalized_magnitude": {
-          "text": 0.5682407232421715,
-          "audio": 0.37903524961083945,
-          "vision": 0.05272402714698909
+          "text": 0.48639250088261826,
+          "audio": 0.25902568259134373,
+          "vision": 0.254581816526038
         },
         "dominant_modality": "text"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3271961808204651,
-        "audio": 0.41522887349128723,
-        "vision": 0.2575749456882477
+        "text": 0.29970550537109375,
+        "audio": 0.46358680725097656,
+        "vision": 0.2367076575756073
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 1,
+          "target_class": 0,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 4,
-              "end_position": 10,
-              "start_seconds": 0.9,
-              "end_seconds": 2.1,
-              "logit_drop": 0.9905
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": 2.0107
             },
             {
               "start_position": 2,
               "end_position": 8,
               "start_seconds": 0.5,
               "end_seconds": 1.7,
-              "logit_drop": 0.8657
+              "logit_drop": 1.8713
             },
             {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": 0.8583
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 1.7849
             }
           ]
         },
         "audio": {
           "modality": "audio",
-          "target_class": 1,
+          "target_class": 0,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 2,
+              "end_position": 8,
+              "start_seconds": 0.5,
+              "end_seconds": 1.7,
+              "logit_drop": -0.0136
+            },
+            {
+              "start_position": 9,
+              "end_position": 15,
+              "start_seconds": 1.9,
+              "end_seconds": 3.1,
+              "logit_drop": -0.0539
+            },
+            {
+              "start_position": 10,
+              "end_position": 16,
+              "start_seconds": 2.1,
+              "end_seconds": 3.3,
+              "logit_drop": -0.0936
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 0,
           "window_length": 6,
           "windows": [
             {
@@ -2626,49 +2649,21 @@
               "end_position": 11,
               "start_seconds": 1.1,
               "end_seconds": 2.3,
-              "logit_drop": 1.0031
+              "logit_drop": 0.2124
             },
             {
-              "start_position": 4,
-              "end_position": 10,
-              "start_seconds": 0.9,
-              "end_seconds": 2.1,
-              "logit_drop": 0.7655
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 0.1652
             },
             {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.5699
-            }
-          ]
-        },
-        "vision": {
-          "modality": "vision",
-          "target_class": 1,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": 0.0103
-            },
-            {
-              "start_position": 8,
-              "end_position": 14,
-              "start_seconds": 1.7,
-              "end_seconds": 2.9,
-              "logit_drop": 0.0057
-            },
-            {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.0043
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.084
             }
           ]
         }
@@ -2678,30 +2673,30 @@
       "sample_index": 23,
       "sample_id": "102858$_$17",
       "modality_contribution": {
-        "clean_logit": 0.7557854056358337,
-        "clean_intensity": -0.141213059425354,
+        "clean_logit": 0.9424269795417786,
+        "clean_intensity": 0.2270582616329193,
         "clean_pred": 1,
         "polarity_delta": {
-          "text": 0.1812695860862732,
-          "audio": -0.4849075675010681,
-          "vision": 0.0007147789001464844
+          "text": 0.16767221689224243,
+          "audio": 1.0920710563659668,
+          "vision": -0.49886566400527954
         },
         "intensity_delta": {
-          "text": 0.5577319264411926,
-          "audio": -0.151608114130795,
-          "vision": 0.04061673581600189
+          "text": 0.096488356590271,
+          "audio": -0.43642446398735046,
+          "vision": 0.13562093675136566
         },
         "normalized_magnitude": {
-          "text": 0.2718125340190319,
-          "audio": 0.7271156597926995,
-          "vision": 0.0010718061882685843
+          "text": 0.09534366244786145,
+          "audio": 0.6209857309523863,
+          "vision": 0.2836706065997523
         },
         "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3262527883052826,
-        "audio": 0.350312739610672,
-        "vision": 0.323434442281723
+        "text": 0.25963208079338074,
+        "audio": 0.4739955961704254,
+        "vision": 0.26637229323387146
       },
       "window_evidence": {
         "text": {
@@ -2710,25 +2705,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.2839
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 0.3743
             },
             {
               "start_position": 5,
               "end_position": 11,
               "start_seconds": 1.1,
               "end_seconds": 2.3,
-              "logit_drop": 0.2516
+              "logit_drop": 0.2842
             },
             {
-              "start_position": 4,
-              "end_position": 10,
-              "start_seconds": 0.9,
-              "end_seconds": 2.1,
-              "logit_drop": 0.24
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 0.2759
             }
           ]
         },
@@ -2742,21 +2737,21 @@
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": 0.2491
+              "logit_drop": 0.4728
             },
             {
               "start_position": 0,
               "end_position": 6,
               "start_seconds": 0.1,
               "end_seconds": 1.3,
-              "logit_drop": 0.1342
+              "logit_drop": 0.3813
             },
             {
               "start_position": 2,
               "end_position": 8,
               "start_seconds": 0.5,
               "end_seconds": 1.7,
-              "logit_drop": -0.023
+              "logit_drop": 0.0079
             }
           ]
         },
@@ -2770,21 +2765,21 @@
               "end_position": 15,
               "start_seconds": 1.9,
               "end_seconds": 3.1,
-              "logit_drop": 0.0073
+              "logit_drop": -0.0314
             },
             {
               "start_position": 8,
               "end_position": 14,
               "start_seconds": 1.7,
               "end_seconds": 2.9,
-              "logit_drop": -0.0045
+              "logit_drop": -0.0777
             },
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": -0.0175
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": -0.2601
             }
           ]
         }
@@ -2794,30 +2789,30 @@
       "sample_index": 24,
       "sample_id": "102858$_$19",
       "modality_contribution": {
-        "clean_logit": 0.883955180644989,
-        "clean_intensity": -0.04297914355993271,
+        "clean_logit": 0.7761961221694946,
+        "clean_intensity": -0.208534836769104,
         "clean_pred": 1,
         "polarity_delta": {
-          "text": -0.0769391655921936,
-          "audio": 0.139897882938385,
-          "vision": -0.1943390965461731
+          "text": 0.06811082363128662,
+          "audio": 0.8276997804641724,
+          "vision": 1.2028048038482666
         },
         "intensity_delta": {
-          "text": 0.1764550879597664,
-          "audio": 0.1094335988163948,
-          "vision": -0.1337943971157074
+          "text": 0.12252950668334961,
+          "audio": 0.39703452587127686,
+          "vision": -0.7939255833625793
         },
         "normalized_magnitude": {
-          "text": 0.18711972110597963,
-          "audio": 0.34023832513987684,
-          "vision": 0.47264195375414353
+          "text": 0.03245512416113597,
+          "audio": 0.3944027940189254,
+          "vision": 0.5731420818199386
         },
         "dominant_modality": "vision"
       },
       "modality_weights_auxiliary": {
-        "text": 0.23789642751216888,
-        "audio": 0.5049349665641785,
-        "vision": 0.25716862082481384
+        "text": 0.24244670569896698,
+        "audio": 0.4012072682380676,
+        "vision": 0.3563460409641266
       },
       "window_evidence": {
         "text": {
@@ -2826,25 +2821,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.0878
+              "start_position": 10,
+              "end_position": 16,
+              "start_seconds": 2.1,
+              "end_seconds": 3.3,
+              "logit_drop": 0.3083
             },
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.0185
+              "start_position": 11,
+              "end_position": 17,
+              "start_seconds": 2.3,
+              "end_seconds": 3.5,
+              "logit_drop": 0.2399
             },
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.0173
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.224
             }
           ]
         },
@@ -2854,25 +2849,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 12,
-              "end_position": 18,
-              "start_seconds": 2.5,
-              "end_seconds": 3.7,
-              "logit_drop": 0.1462
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.188
             },
             {
               "start_position": 11,
               "end_position": 17,
               "start_seconds": 2.3,
               "end_seconds": 3.5,
-              "logit_drop": 0.1052
+              "logit_drop": 0.1126
             },
             {
-              "start_position": 3,
-              "end_position": 9,
-              "start_seconds": 0.7,
-              "end_seconds": 1.9,
-              "logit_drop": -0.0404
+              "start_position": 12,
+              "end_position": 18,
+              "start_seconds": 2.5,
+              "end_seconds": 3.7,
+              "logit_drop": 0.0933
             }
           ]
         },
@@ -2882,25 +2877,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.0075
-            },
-            {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": -0.0043
+              "logit_drop": 0.056
+            },
+            {
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 0.0316
             },
             {
               "start_position": 2,
               "end_position": 8,
               "start_seconds": 0.5,
               "end_seconds": 1.7,
-              "logit_drop": -0.0089
+              "logit_drop": 0.0031
             }
           ]
         }
@@ -2910,30 +2905,30 @@
       "sample_index": 25,
       "sample_id": "112433$_$10",
       "modality_contribution": {
-        "clean_logit": 1.445618748664856,
-        "clean_intensity": 0.21080924570560455,
+        "clean_logit": 2.9004900455474854,
+        "clean_intensity": 0.19919636845588684,
         "clean_pred": 1,
         "polarity_delta": {
-          "text": 0.4878966808319092,
-          "audio": -0.20787179470062256,
-          "vision": -0.18803906440734863
+          "text": 0.431774377822876,
+          "audio": 0.6954801082611084,
+          "vision": -0.18642783164978027
         },
         "intensity_delta": {
-          "text": 0.48919977247714996,
-          "audio": 0.0003134608268737793,
-          "vision": 0.11152477562427521
+          "text": 0.14085321128368378,
+          "audio": 0.06978338956832886,
+          "vision": -0.034707143902778625
         },
         "normalized_magnitude": {
-          "text": 0.5520395094899254,
-          "audio": 0.23520029566025508,
-          "vision": 0.21276019484981956
+          "text": 0.32867487975915716,
+          "audio": 0.5294127041771273,
+          "vision": 0.14191241606371563
         },
-        "dominant_modality": "text"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.296479195356369,
-        "audio": 0.4365083873271942,
-        "vision": 0.26701244711875916
+        "text": 0.2614161968231201,
+        "audio": 0.47245827317237854,
+        "vision": 0.26612555980682373
       },
       "window_evidence": {
         "text": {
@@ -2946,21 +2941,21 @@
               "end_position": 6,
               "start_seconds": 0.1,
               "end_seconds": 1.3,
-              "logit_drop": 0.4879
+              "logit_drop": 0.4318
             },
             {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": 0.11
+              "logit_drop": 0.2338
             },
             {
               "start_position": 2,
               "end_position": 8,
               "start_seconds": 0.5,
               "end_seconds": 1.7,
-              "logit_drop": 0.0175
+              "logit_drop": -0.1126
             }
           ]
         },
@@ -2974,14 +2969,14 @@
               "end_position": 6,
               "start_seconds": 0.1,
               "end_seconds": 1.3,
-              "logit_drop": -0.2079
+              "logit_drop": 0.6955
             },
             {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": -0.2079
+              "logit_drop": 0.6955
             }
           ]
         },
@@ -2995,14 +2990,14 @@
               "end_position": 6,
               "start_seconds": 0.1,
               "end_seconds": 1.3,
-              "logit_drop": -0.188
+              "logit_drop": -0.1864
             },
             {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": -0.188
+              "logit_drop": -0.1864
             }
           ]
         }
@@ -3012,30 +3007,30 @@
       "sample_index": 26,
       "sample_id": "112433$_$3",
       "modality_contribution": {
-        "clean_logit": 0.40238118171691895,
-        "clean_intensity": 0.14444416761398315,
+        "clean_logit": 0.20345120131969452,
+        "clean_intensity": 0.20713773369789124,
         "clean_pred": 1,
         "polarity_delta": {
-          "text": -0.033388108015060425,
-          "audio": 0.26495710015296936,
-          "vision": 0.32506120204925537
+          "text": 0.07355903089046478,
+          "audio": 1.1709654331207275,
+          "vision": -0.7448073625564575
         },
         "intensity_delta": {
-          "text": -0.011482000350952148,
-          "audio": -0.05848574638366699,
-          "vision": -0.12355148792266846
+          "text": -0.34137454628944397,
+          "audio": 0.3507695198059082,
+          "vision": -0.21741315722465515
         },
         "normalized_magnitude": {
-          "text": 0.05355753079828481,
-          "audio": 0.4250150396442345,
-          "vision": 0.5214274295574807
+          "text": 0.03697675265035193,
+          "audio": 0.5886224799113007,
+          "vision": 0.3744007674383474
         },
-        "dominant_modality": "vision"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.26689696311950684,
-        "audio": 0.4104546308517456,
-        "vision": 0.32264843583106995
+        "text": 0.12776032090187073,
+        "audio": 0.6918027400970459,
+        "vision": 0.18043698370456696
       },
       "window_evidence": {
         "text": {
@@ -3044,25 +3039,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 23,
-              "end_position": 29,
-              "start_seconds": 4.7,
-              "end_seconds": 5.9,
-              "logit_drop": 0.1067
+              "start_position": 22,
+              "end_position": 28,
+              "start_seconds": 4.5,
+              "end_seconds": 5.7,
+              "logit_drop": 0.104
+            },
+            {
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.0762
             },
             {
               "start_position": 20,
               "end_position": 26,
               "start_seconds": 4.1,
               "end_seconds": 5.3,
-              "logit_drop": 0.1031
-            },
-            {
-              "start_position": 22,
-              "end_position": 28,
-              "start_seconds": 4.5,
-              "end_seconds": 5.7,
-              "logit_drop": 0.1029
+              "logit_drop": 0.0716
             }
           ]
         },
@@ -3072,25 +3067,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 17,
-              "end_position": 23,
-              "start_seconds": 3.5,
-              "end_seconds": 4.7,
-              "logit_drop": 0.0383
+              "start_position": 22,
+              "end_position": 28,
+              "start_seconds": 4.5,
+              "end_seconds": 5.7,
+              "logit_drop": 0.3252
             },
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.0376
+              "start_position": 21,
+              "end_position": 27,
+              "start_seconds": 4.3,
+              "end_seconds": 5.5,
+              "logit_drop": 0.313
             },
             {
-              "start_position": 18,
-              "end_position": 24,
-              "start_seconds": 3.7,
-              "end_seconds": 4.9,
-              "logit_drop": 0.0361
+              "start_position": 23,
+              "end_position": 29,
+              "start_seconds": 4.7,
+              "end_seconds": 5.9,
+              "logit_drop": 0.2871
             }
           ]
         },
@@ -3100,25 +3095,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 15,
-              "end_position": 21,
-              "start_seconds": 3.1,
-              "end_seconds": 4.3,
-              "logit_drop": 0.0487
+              "start_position": 18,
+              "end_position": 24,
+              "start_seconds": 3.7,
+              "end_seconds": 4.9,
+              "logit_drop": 0.1162
             },
             {
-              "start_position": 16,
-              "end_position": 22,
-              "start_seconds": 3.3,
-              "end_seconds": 4.5,
-              "logit_drop": 0.0466
+              "start_position": 19,
+              "end_position": 25,
+              "start_seconds": 3.9,
+              "end_seconds": 5.1,
+              "logit_drop": 0.076
             },
             {
-              "start_position": 14,
-              "end_position": 20,
-              "start_seconds": 2.9,
-              "end_seconds": 4.1,
-              "logit_drop": 0.0456
+              "start_position": 17,
+              "end_position": 23,
+              "start_seconds": 3.5,
+              "end_seconds": 4.7,
+              "logit_drop": 0.0609
             }
           ]
         }
@@ -3128,30 +3123,30 @@
       "sample_index": 27,
       "sample_id": "112433$_$7",
       "modality_contribution": {
-        "clean_logit": 0.8163588047027588,
-        "clean_intensity": -0.3562089502811432,
+        "clean_logit": 2.3063488006591797,
+        "clean_intensity": -0.030600618571043015,
         "clean_pred": 1,
         "polarity_delta": {
-          "text": -0.153908371925354,
-          "audio": 0.26276975870132446,
-          "vision": -0.28439342975616455
+          "text": 0.2906348705291748,
+          "audio": 1.9046658277511597,
+          "vision": 0.8232134580612183
         },
         "intensity_delta": {
-          "text": -0.07791385054588318,
-          "audio": 0.36505916714668274,
-          "vision": -0.19611310958862305
+          "text": -0.48323435708880424,
+          "audio": 0.35732297971844673,
+          "vision": 0.29829733446240425
         },
         "normalized_magnitude": {
-          "text": 0.21953304145058647,
-          "audio": 0.3748116077591715,
-          "vision": 0.40565535079024206
+          "text": 0.0962840839817114,
+          "audio": 0.630994498982115,
+          "vision": 0.2727214170361736
         },
-        "dominant_modality": "vision"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.23366223275661469,
-        "audio": 0.4901157319545746,
-        "vision": 0.2762220799922943
+        "text": 0.2426019310951233,
+        "audio": 0.5301235914230347,
+        "vision": 0.22727444767951965
       },
       "window_evidence": {
         "text": {
@@ -3164,21 +3159,21 @@
               "end_position": 12,
               "start_seconds": 1.3,
               "end_seconds": 2.5,
-              "logit_drop": 0.2633
+              "logit_drop": 0.7115
+            },
+            {
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.5596
             },
             {
               "start_position": 7,
               "end_position": 13,
               "start_seconds": 1.5,
               "end_seconds": 2.7,
-              "logit_drop": 0.1929
-            },
-            {
-              "start_position": 8,
-              "end_position": 14,
-              "start_seconds": 1.7,
-              "end_seconds": 2.9,
-              "logit_drop": 0.1921
+              "logit_drop": 0.3553
             }
           ]
         },
@@ -3188,25 +3183,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 2,
-              "end_position": 8,
-              "start_seconds": 0.5,
-              "end_seconds": 1.7,
-              "logit_drop": 0.2517
-            },
-            {
               "start_position": 1,
               "end_position": 7,
               "start_seconds": 0.3,
               "end_seconds": 1.5,
-              "logit_drop": 0.2233
+              "logit_drop": 1.0743
+            },
+            {
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 0.8607
             },
             {
               "start_position": 4,
               "end_position": 10,
               "start_seconds": 0.9,
               "end_seconds": 2.1,
-              "logit_drop": 0.1842
+              "logit_drop": 0.5955
             }
           ]
         },
@@ -3216,25 +3211,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": -0.0016
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.8283
             },
             {
-              "start_position": 8,
-              "end_position": 14,
-              "start_seconds": 1.7,
-              "end_seconds": 2.9,
-              "logit_drop": -0.0203
+              "start_position": 3,
+              "end_position": 9,
+              "start_seconds": 0.7,
+              "end_seconds": 1.9,
+              "logit_drop": 0.7425
             },
             {
-              "start_position": 7,
-              "end_position": 13,
-              "start_seconds": 1.5,
-              "end_seconds": 2.7,
-              "logit_drop": -0.0221
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.6728
             }
           ]
         }
@@ -3244,113 +3239,113 @@
       "sample_index": 28,
       "sample_id": "112433$_$6",
       "modality_contribution": {
-        "clean_logit": 1.4569936990737915,
-        "clean_intensity": 0.5005007982254028,
-        "clean_pred": 2,
+        "clean_logit": 1.1245583295822144,
+        "clean_intensity": -0.341860294342041,
+        "clean_pred": 1,
         "polarity_delta": {
-          "text": -0.2590155601501465,
-          "audio": 0.8618259429931641,
-          "vision": 0.4938161373138428
+          "text": 0.5236968994140625,
+          "audio": 0.9998396039009094,
+          "vision": -0.3043849468231201
         },
         "intensity_delta": {
-          "text": -0.0710572600364685,
-          "audio": 0.1832154393196106,
-          "vision": 0.11559784412384033
+          "text": -0.8468824028968811,
+          "audio": 0.41040825843811035,
+          "vision": -0.16369931399822235
         },
         "normalized_magnitude": {
-          "text": 0.16041515777723145,
-          "audio": 0.5337515033522263,
-          "vision": 0.30583333887054226
+          "text": 0.2864985797800553,
+          "audio": 0.54698171183744,
+          "vision": 0.16651970838250466
         },
         "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.38998907804489136,
-        "audio": 0.33389976620674133,
-        "vision": 0.2761111855506897
+        "text": 0.24464868009090424,
+        "audio": 0.5842315554618835,
+        "vision": 0.1711197793483734
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 2,
+          "target_class": 1,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 1.0183
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.196
             },
             {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 1.0158
+              "start_position": 15,
+              "end_position": 21,
+              "start_seconds": 3.1,
+              "end_seconds": 4.3,
+              "logit_drop": 0.176
             },
             {
-              "start_position": 6,
-              "end_position": 12,
-              "start_seconds": 1.3,
-              "end_seconds": 2.5,
-              "logit_drop": 0.872
+              "start_position": 12,
+              "end_position": 18,
+              "start_seconds": 2.5,
+              "end_seconds": 3.7,
+              "logit_drop": 0.167
             }
           ]
         },
         "audio": {
           "modality": "audio",
-          "target_class": 2,
+          "target_class": 1,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 4,
-              "end_position": 10,
-              "start_seconds": 0.9,
-              "end_seconds": 2.1,
-              "logit_drop": 0.3395
-            },
-            {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.3264
-            },
-            {
-              "start_position": 9,
-              "end_position": 15,
-              "start_seconds": 1.9,
-              "end_seconds": 3.1,
-              "logit_drop": 0.2883
-            }
-          ]
-        },
-        "vision": {
-          "modality": "vision",
-          "target_class": 2,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 17,
-              "end_position": 23,
-              "start_seconds": 3.5,
-              "end_seconds": 4.7,
-              "logit_drop": 0.2805
-            },
-            {
-              "start_position": 16,
-              "end_position": 22,
-              "start_seconds": 3.3,
-              "end_seconds": 4.5,
-              "logit_drop": 0.2563
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.2335
             },
             {
               "start_position": 18,
               "end_position": 24,
               "start_seconds": 3.7,
               "end_seconds": 4.9,
-              "logit_drop": 0.2275
+              "logit_drop": 0.2243
+            },
+            {
+              "start_position": 13,
+              "end_position": 19,
+              "start_seconds": 2.7,
+              "end_seconds": 3.9,
+              "logit_drop": 0.2098
+            }
+          ]
+        },
+        "vision": {
+          "modality": "vision",
+          "target_class": 1,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 18,
+              "end_position": 24,
+              "start_seconds": 3.7,
+              "end_seconds": 4.9,
+              "logit_drop": 0.164
+            },
+            {
+              "start_position": 17,
+              "end_position": 23,
+              "start_seconds": 3.5,
+              "end_seconds": 4.7,
+              "logit_drop": 0.1499
+            },
+            {
+              "start_position": 16,
+              "end_position": 22,
+              "start_seconds": 3.3,
+              "end_seconds": 4.5,
+              "logit_drop": 0.1111
             }
           ]
         }
@@ -3360,35 +3355,35 @@
       "sample_index": 29,
       "sample_id": "117tQqLjza4$_$6",
       "modality_contribution": {
-        "clean_logit": 0.484397828578949,
-        "clean_intensity": 0.27102869749069214,
-        "clean_pred": 2,
+        "clean_logit": 2.471477746963501,
+        "clean_intensity": 0.3393896818161011,
+        "clean_pred": 1,
         "polarity_delta": {
-          "text": 1.6618199348449707,
-          "audio": -0.5585083365440369,
-          "vision": 0.14911183714866638
+          "text": 0.7644745111465454,
+          "audio": 0.8466788530349731,
+          "vision": -0.5033245086669922
         },
         "intensity_delta": {
-          "text": 0.8804112672805786,
-          "audio": -0.15601301193237305,
-          "vision": 0.0329819917678833
+          "text": 0.0040495991706848145,
+          "audio": 0.04025083780288696,
+          "vision": -0.03621605038642883
         },
         "normalized_magnitude": {
-          "text": 0.7013555349455873,
-          "audio": 0.23571321112173055,
-          "vision": 0.06293125393268217
+          "text": 0.3615429231788018,
+          "audio": 0.4004198217947644,
+          "vision": 0.23803725502643377
         },
-        "dominant_modality": "text"
+        "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.29310616850852966,
-        "audio": 0.42905372381210327,
-        "vision": 0.27784013748168945
+        "text": 0.13879156112670898,
+        "audio": 0.6959595084190369,
+        "vision": 0.16524894535541534
       },
       "window_evidence": {
         "text": {
           "modality": "text",
-          "target_class": 2,
+          "target_class": 1,
           "window_length": 6,
           "windows": [
             {
@@ -3396,77 +3391,77 @@
               "end_position": 19,
               "start_seconds": 2.7,
               "end_seconds": 3.9,
-              "logit_drop": 0.5078
-            },
-            {
-              "start_position": 15,
-              "end_position": 21,
-              "start_seconds": 3.1,
-              "end_seconds": 4.3,
-              "logit_drop": 0.49
-            },
-            {
-              "start_position": 5,
-              "end_position": 11,
-              "start_seconds": 1.1,
-              "end_seconds": 2.3,
-              "logit_drop": 0.4803
-            }
-          ]
-        },
-        "audio": {
-          "modality": "audio",
-          "target_class": 2,
-          "window_length": 6,
-          "windows": [
-            {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 0.059
-            },
-            {
-              "start_position": 13,
-              "end_position": 19,
-              "start_seconds": 2.7,
-              "end_seconds": 3.9,
-              "logit_drop": 0.0381
+              "logit_drop": 0.6492
             },
             {
               "start_position": 12,
               "end_position": 18,
               "start_seconds": 2.5,
               "end_seconds": 3.7,
-              "logit_drop": 0.0352
+              "logit_drop": 0.6068
+            },
+            {
+              "start_position": 11,
+              "end_position": 17,
+              "start_seconds": 2.3,
+              "end_seconds": 3.5,
+              "logit_drop": 0.5353
+            }
+          ]
+        },
+        "audio": {
+          "modality": "audio",
+          "target_class": 1,
+          "window_length": 6,
+          "windows": [
+            {
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 1.0045
+            },
+            {
+              "start_position": 10,
+              "end_position": 16,
+              "start_seconds": 2.1,
+              "end_seconds": 3.3,
+              "logit_drop": 0.9368
+            },
+            {
+              "start_position": 9,
+              "end_position": 15,
+              "start_seconds": 1.9,
+              "end_seconds": 3.1,
+              "logit_drop": 0.8749
             }
           ]
         },
         "vision": {
           "modality": "vision",
-          "target_class": 2,
+          "target_class": 1,
           "window_length": 6,
           "windows": [
             {
-              "start_position": 15,
-              "end_position": 21,
-              "start_seconds": 3.1,
-              "end_seconds": 4.3,
-              "logit_drop": -0.0564
+              "start_position": 7,
+              "end_position": 13,
+              "start_seconds": 1.5,
+              "end_seconds": 2.7,
+              "logit_drop": 0.2451
             },
             {
-              "start_position": 14,
-              "end_position": 20,
-              "start_seconds": 2.9,
-              "end_seconds": 4.1,
-              "logit_drop": -0.0975
+              "start_position": 6,
+              "end_position": 12,
+              "start_seconds": 1.3,
+              "end_seconds": 2.5,
+              "logit_drop": 0.2282
             },
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": -0.1192
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 0.1516
             }
           ]
         }
@@ -3476,30 +3471,30 @@
       "sample_index": 30,
       "sample_id": "11j7EfglCAs$_$2",
       "modality_contribution": {
-        "clean_logit": 1.20064377784729,
-        "clean_intensity": 0.44741034507751465,
+        "clean_logit": 1.6470340490341187,
+        "clean_intensity": 0.46711182594299316,
         "clean_pred": 2,
         "polarity_delta": {
-          "text": 0.9985744953155518,
-          "audio": 0.10781490802764893,
-          "vision": -0.7688647508621216
+          "text": 0.6141951084136963,
+          "audio": -0.44895660877227783,
+          "vision": -0.9396868944168091
         },
         "intensity_delta": {
-          "text": 0.46398316510021687,
-          "audio": 0.013414442539215088,
-          "vision": -0.22919392585754395
+          "text": 0.125235915184021,
+          "audio": -0.12808120250701904,
+          "vision": -0.19157230854034424
         },
         "normalized_magnitude": {
-          "text": 0.5325008842541231,
-          "audio": 0.05749349110139032,
-          "vision": 0.4100056246444866
+          "text": 0.3066623066159999,
+          "audio": 0.22416015258113967,
+          "vision": 0.4691775408028604
         },
-        "dominant_modality": "text"
+        "dominant_modality": "vision"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3028479516506195,
-        "audio": 0.34613898396492004,
-        "vision": 0.35101306438446045
+        "text": 0.18976987898349762,
+        "audio": 0.6583976149559021,
+        "vision": 0.15183253586292267
       },
       "window_evidence": {
         "text": {
@@ -3508,25 +3503,25 @@
           "window_length": 6,
           "windows": [
             {
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.377
+            },
+            {
               "start_position": 10,
               "end_position": 16,
               "start_seconds": 2.1,
               "end_seconds": 3.3,
-              "logit_drop": 1.1727
+              "logit_drop": 0.3593
             },
             {
               "start_position": 11,
               "end_position": 17,
               "start_seconds": 2.3,
               "end_seconds": 3.5,
-              "logit_drop": 1.098
-            },
-            {
-              "start_position": 12,
-              "end_position": 18,
-              "start_seconds": 2.5,
-              "end_seconds": 3.7,
-              "logit_drop": 0.8119
+              "logit_drop": 0.3246
             }
           ]
         },
@@ -3536,25 +3531,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 16,
-              "end_position": 22,
-              "start_seconds": 3.3,
-              "end_seconds": 4.5,
-              "logit_drop": 0.5543
-            },
-            {
-              "start_position": 17,
-              "end_position": 23,
-              "start_seconds": 3.5,
-              "end_seconds": 4.7,
-              "logit_drop": 0.5443
-            },
-            {
               "start_position": 15,
               "end_position": 21,
               "start_seconds": 3.1,
               "end_seconds": 4.3,
-              "logit_drop": 0.5075
+              "logit_drop": 0.9549
+            },
+            {
+              "start_position": 14,
+              "end_position": 20,
+              "start_seconds": 2.9,
+              "end_seconds": 4.1,
+              "logit_drop": 0.9387
+            },
+            {
+              "start_position": 16,
+              "end_position": 22,
+              "start_seconds": 3.3,
+              "end_seconds": 4.5,
+              "logit_drop": 0.8817
             }
           ]
         },
@@ -3568,21 +3563,21 @@
               "end_position": 22,
               "start_seconds": 3.3,
               "end_seconds": 4.5,
-              "logit_drop": 0.0229
+              "logit_drop": -0.096
             },
             {
               "start_position": 17,
               "end_position": 23,
               "start_seconds": 3.5,
               "end_seconds": 4.7,
-              "logit_drop": 0.0229
+              "logit_drop": -0.096
             },
             {
               "start_position": 18,
               "end_position": 24,
               "start_seconds": 3.7,
               "end_seconds": 4.9,
-              "logit_drop": 0.0229
+              "logit_drop": -0.096
             }
           ]
         }
@@ -3592,30 +3587,30 @@
       "sample_index": 31,
       "sample_id": "121128$_$10",
       "modality_contribution": {
-        "clean_logit": 1.2008297443389893,
-        "clean_intensity": -0.45879310369491577,
+        "clean_logit": 2.6004531383514404,
+        "clean_intensity": -0.9084744453430176,
         "clean_pred": 0,
         "polarity_delta": {
-          "text": -0.9022567272186279,
-          "audio": 0.9513669013977051,
-          "vision": 0.5013244152069092
+          "text": 1.9433666467666626,
+          "audio": 2.4338114261627197,
+          "vision": 0.0659494400024414
         },
         "intensity_delta": {
-          "text": 0.33023005723953247,
-          "audio": -0.38005657494068146,
-          "vision": -0.17024526000022888
+          "text": -0.8374066278338432,
+          "audio": -0.8011864423751831,
+          "vision": 0.12925100326538086
         },
         "normalized_magnitude": {
-          "text": 0.38313232836925787,
-          "audio": 0.40398636559860884,
-          "vision": 0.21288130603213326
+          "text": 0.43738709751418337,
+          "audio": 0.5477698803554605,
+          "vision": 0.014843022130356164
         },
         "dominant_modality": "audio"
       },
       "modality_weights_auxiliary": {
-        "text": 0.3751673400402069,
-        "audio": 0.25333017110824585,
-        "vision": 0.37150242924690247
+        "text": 0.3624844253063202,
+        "audio": 0.1908044070005417,
+        "vision": 0.4467112421989441
       },
       "window_evidence": {
         "text": {
@@ -3624,25 +3619,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 0.0564
+              "start_position": 1,
+              "end_position": 7,
+              "start_seconds": 0.3,
+              "end_seconds": 1.5,
+              "logit_drop": 2.0485
             },
             {
-              "start_position": 12,
-              "end_position": 18,
-              "start_seconds": 2.5,
-              "end_seconds": 3.7,
-              "logit_drop": 0.0126
+              "start_position": 0,
+              "end_position": 6,
+              "start_seconds": 0.1,
+              "end_seconds": 1.3,
+              "logit_drop": 1.8407
             },
             {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": -0.0065
+              "start_position": 6,
+              "end_position": 12,
+              "start_seconds": 1.3,
+              "end_seconds": 2.5,
+              "logit_drop": 1.0163
             }
           ]
         },
@@ -3652,25 +3647,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 0,
-              "end_position": 6,
-              "start_seconds": 0.1,
-              "end_seconds": 1.3,
-              "logit_drop": 0.939
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 1.3267
             },
             {
-              "start_position": 1,
-              "end_position": 7,
-              "start_seconds": 0.3,
-              "end_seconds": 1.5,
-              "logit_drop": 0.6026
+              "start_position": 8,
+              "end_position": 14,
+              "start_seconds": 1.7,
+              "end_seconds": 2.9,
+              "logit_drop": 1.1491
             },
             {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 0.5773
+              "start_position": 5,
+              "end_position": 11,
+              "start_seconds": 1.1,
+              "end_seconds": 2.3,
+              "logit_drop": 1.1358
             }
           ]
         },
@@ -3680,25 +3675,25 @@
           "window_length": 6,
           "windows": [
             {
-              "start_position": 10,
-              "end_position": 16,
-              "start_seconds": 2.1,
-              "end_seconds": 3.3,
-              "logit_drop": 0.2995
-            },
-            {
-              "start_position": 11,
-              "end_position": 17,
-              "start_seconds": 2.3,
-              "end_seconds": 3.5,
-              "logit_drop": 0.2675
-            },
-            {
               "start_position": 9,
               "end_position": 15,
               "start_seconds": 1.9,
               "end_seconds": 3.1,
-              "logit_drop": 0.2211
+              "logit_drop": 0.7745
+            },
+            {
+              "start_position": 4,
+              "end_position": 10,
+              "start_seconds": 0.9,
+              "end_seconds": 2.1,
+              "logit_drop": 0.7517
+            },
+            {
+              "start_position": 10,
+              "end_position": 16,
+              "start_seconds": 2.1,
+              "end_seconds": 3.3,
+              "logit_drop": 0.7504
             }
           ]
         }
