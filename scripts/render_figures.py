@@ -22,9 +22,9 @@ OUT = REPO / "problem2" / "outputs" / "_figures"
 OUT.mkdir(parents=True, exist_ok=True)
 
 ARMS = {
-    "A (text-only)":   ("arm_A_seed_42", "Arm A"),
-    "B (gap-aware)":   ("arm_B_seed_42", "Arm B"),
-    "C (compensating)":("arm_C_seed_42", "Arm C*"),  # Arm C uses the best-of-2024 weights
+    "A (clean training)": ("arm_A_seed_42", "Arm A"),
+    "B (gap training)": ("arm_B_seed_42", "Arm B"),
+    "C (gap repair)": ("arm_C_seed_42", "Arm C"),
 }
 SEED_COLOURS = {1: "#1f77b4", 7: "#2ca02c", 42: "#ff7f0e",
                 100: "#9467bd", 2024: "#d62728"}
@@ -70,11 +70,9 @@ def fig_arm_comparison() -> Path:
         ax.set_xticklabels(["accuracy", "f1_macro"])
         ax.set_title(f"test / {cond}")
         ax.set_ylim(0.30, 0.60)
-        ax.axhline(1 / 3, color="grey", linestyle="--", linewidth=0.8,
-                   label="random baseline" if cond == "clean" else None)
     axes[0].legend(loc="upper left", fontsize=8, frameon=False)
     axes[0].set_ylabel("score")
-    fig.suptitle("Test metrics per arm (clean vs 99 % missing-mixed)")
+    fig.suptitle("Exploratory test metrics per arm (clean vs mixed gaps)")
     fig.tight_layout(rect=(0, 0, 1, 0.94))
     path = OUT / "fig1_arm_comparison.png"
     fig.savefig(path)
@@ -83,7 +81,7 @@ def fig_arm_comparison() -> Path:
 
 
 # ---------------------------------------------------------------------------
-# Figure 2: Arm C training curves (selection_score + loss) for the four
+# Figure 2: Arm C training curves (selection_score + loss) for the five
 # candidate seeds.  Best epoch is highlighted with a star.
 # ---------------------------------------------------------------------------
 def fig_seed_training() -> Path:
@@ -114,7 +112,7 @@ def fig_seed_training() -> Path:
     axes[1].set_ylabel("training loss")
     axes[1].set_title("training loss per epoch")
     axes[1].legend(fontsize=8, frameon=False, loc="upper right")
-    fig.suptitle("Arm C · four-seed training curves (★ = best epoch)")
+    fig.suptitle("Arm C · five-seed training curves (★ = best epoch)")
     fig.tight_layout(rect=(0, 0, 1, 0.94))
     path = OUT / "fig2_arm_c_seed_curves.png"
     fig.savefig(path)
@@ -149,7 +147,7 @@ def fig_seed_scatter() -> Path:
     ax.axhline(1 / 3, color="grey", linestyle="--", linewidth=0.8, label="random F1")
     ax.set_xlabel("test clean accuracy")
     ax.set_ylabel("test clean F1-macro")
-    ax.set_title("Arm C · test clean trade-off across 5 seeds")
+    ax.set_title("Arm C · exploratory test comparison across 5 seeds")
     ax.legend(loc="lower right", frameon=False)
     ax.grid(alpha=0.3)
     fig.tight_layout()
@@ -178,7 +176,7 @@ def fig_robustness_grid() -> Path:
     positions = ("start", "middle", "end")
     widths = sorted({w for mod in by_mod for _, w, _ in by_mod[mod]})
     fig, axes = plt.subplots(1, 3, figsize=(11, 3.5),
-                             sharey=True, sharex=True)
+                             sharey=True, sharex=True, constrained_layout=True)
     titles = {"text": "text gap",
               "audio": "audio gap",
               "vision": "vision gap"}
@@ -191,14 +189,14 @@ def fig_robustness_grid() -> Path:
         im = ax.imshow(matrix, cmap="viridis", aspect="auto",
                        vmin=0.30, vmax=0.55)
         ax.set_xticks(range(len(widths)))
-        ax.set_xticklabels([f"{w:g}s" for w in widths])
+        ax.set_xticklabels([f"{w:.0%}" for w in widths])
         ax.set_yticks(range(len(positions)))
         ax.set_yticklabels(positions)
         ax.set_title(titles[mod])
     axes[0].set_ylabel("gap position")
-    fig.colorbar(im, ax=axes, label="F1-macro", shrink=0.8)
+    fig.supxlabel("fraction of observed positions masked")
+    fig.colorbar(im, ax=axes, label="F1-macro", shrink=0.8, pad=0.03)
     fig.suptitle("Arm C · 27-cell robustness grid (valid set)")
-    fig.tight_layout(rect=(0, 0, 1, 0.93))
     path = OUT / "fig4_arm_c_robustness_grid.png"
     fig.savefig(path)
     plt.close(fig)

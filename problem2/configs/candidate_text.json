@@ -1,0 +1,26 @@
+{
+  "seed": 42,
+  "validation_seed": 20260923,
+  "batch_size": 32,
+  "epochs": 30,
+  "patience": 7,
+  "min_delta": 0.0001,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "gradient_clip": 1,
+  "regression_weight": 0.5,
+  "train_missing_probability": 0.8,
+  "architecture": "distilled_gap_slot_emo",
+  "teacher_weight": 0.15,
+  "class_weight_power": 0,
+  "model": {
+    "vocab_size": 30522,
+    "dim": 128,
+    "slots": 16,
+    "slot_heads": 4,
+    "slot_iterations": 3,
+    "max_len": 50,
+    "dropout": 0.1,
+    "use_cmf": false
+  }
+}

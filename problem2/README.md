@@ -28,6 +28,8 @@ Three formal seed-42 runs are available under `problem2/outputs/`:
 
 现有 SlotEmo 的代码审计、最小改造机制和 A/B/C 验证协议见 [基于SlotEmo的问题二建模方案](基于SlotEmo的问题二建模方案.md)。该文件为设计，不是已训练结果。
 
+面向当前分数的文本蒸馏、条件融合与类别加权候选实验见 [候选模型改进与运行](候选模型改进与运行.md)。候选代码尚无训练结果，当前交付权重不变。现有 Arm C seed=2024 的替换过程曾参考 test 分数，见 [建模与结果](问题二建模与结果.md) 中的证据边界。
+
 ## Linux 运行
 
 在仓库根目录安装 `problem2/requirements.txt`。设置 `MOSEI_DATA_ROOT` 为**同时包含附件2和附件3文件夹**的数据根目录，或在每个命令使用 `--data-root`。以下命令由用户在具备 CUDA 的机器上执行。Windows 和 Linux 的分步入口见 [运行命令](运行命令.md)。

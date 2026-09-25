@@ -20,6 +20,8 @@ from torch import nn
 from torch.utils.data import DataLoader
 
 from models.gap_slot_emo import GapSlotEmo
+from models.gap_slot_emo_candidate import GapSlotEmoCandidate
+from problem2.candidate_data import TeacherAlignedDataset, load_candidate_splits
 from problem2.data import AlignedDataset, SplitData, fit_normalization, load_attachment2, load_attachment3, normalize
 from problem2.metrics import sentiment_metrics
 
@@ -123,8 +125,20 @@ def _write_predictions(path: Path, scenarios: dict[str, dict]) -> None:
                                  *(json.dumps(p) for p in result["artificial_gap_positions"][i])))
 
 
+def _candidate(config: dict) -> bool:
+    architecture = config.get("architecture", "gap_slot_emo")
+    if architecture not in ("gap_slot_emo", "distilled_gap_slot_emo"):
+        raise ValueError(f"unknown model architecture: {architecture}")
+    return architecture == "distilled_gap_slot_emo"
+
+
+def _model_source(config: dict) -> Path:
+    return REPO / "models" / ("gap_slot_emo_candidate.py" if _candidate(config) else "gap_slot_emo.py")
+
+
 def _make_model(config: dict, arm: str) -> GapSlotEmo:
-    return GapSlotEmo(**config["model"], use_gap_repair=(arm == "C"))
+    cls = GapSlotEmoCandidate if _candidate(config) else GapSlotEmo
+    return cls(**config["model"], use_gap_repair=(arm == "C"))
 
 
 def _device(value: str) -> torch.device:
@@ -144,20 +158,39 @@ def train(args: argparse.Namespace) -> None:
     _seed(seed)
     device = _device(args.device)
     data_path = args.data_root / ATTACHMENT2
-    splits = load_attachment2(data_path)
+    candidate = _candidate(config)
+    if candidate:
+        splits, teacher = load_candidate_splits(data_path)
+    else:
+        splits = load_attachment2(data_path)
     if is_smoke:
         splits = {"train": _subset(splits["train"], 32), "valid": _subset(splits["valid"], 16)}
+        if candidate:
+            teacher = teacher[:32]
     stats = fit_normalization(splits["train"])
     for split in splits.values():
         normalize(split, stats)
     train_mode = "clean" if arm == "A" else "mixed"
-    train_data = AlignedDataset(splits["train"], mode=train_mode, seed=seed, probability=config["train_missing_probability"])
+    train_args = dict(mode=train_mode, seed=seed, probability=config["train_missing_probability"])
+    train_data = (TeacherAlignedDataset(splits["train"], teacher, **train_args) if candidate
+                  else AlignedDataset(splits["train"], **train_args))
     valid_clean = AlignedDataset(splits["valid"], mode="clean")
     valid_mixed = AlignedDataset(splits["valid"], mode="mixed", seed=config["validation_seed"], probability=1.0)
     model = _make_model(config, arm).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=config["learning_rate"], weight_decay=config["weight_decay"])
-    criterion_cls = nn.CrossEntropyLoss()
+    weight_power = float(config.get("class_weight_power", 0.0))
+    if not 0 <= weight_power <= 1:
+        raise ValueError("class_weight_power must be in [0,1]")
+    counts = np.bincount(splits["train"].labels, minlength=3)
+    if np.any(counts == 0) and not is_smoke:
+        raise ValueError("all three training classes must be present")
+    class_weights = torch.as_tensor((counts.mean() / np.maximum(counts, 1)) ** weight_power,
+                                    dtype=torch.float32, device=device)
+    criterion_cls = nn.CrossEntropyLoss(weight=class_weights)
     criterion_reg = nn.HuberLoss(delta=1.0)
+    teacher_weight = float(config.get("teacher_weight", 0.0))
+    if teacher_weight < 0 or (teacher_weight > 0 and not candidate):
+        raise ValueError("teacher_weight requires the distilled candidate architecture")
     out = args.output or REPO / "problem2" / "outputs" / f"arm_{arm}_seed_{seed}"
     if (out / "run.json").exists() or (out / "best.pt").exists():
         raise FileExistsError(f"run directory already contains results: {out}; choose a new --output")
@@ -167,7 +200,9 @@ def train(args: argparse.Namespace) -> None:
         "arm": arm, "seed": seed, "data_release": "aligned_50.pkl",
         "attachment2_sha256": _sha256(data_path), "device": str(device),
         "torch": str(torch.__version__), "numpy": np.__version__, "config": config,
-        "model_source_sha256": _sha256(REPO / "models" / "gap_slot_emo.py"),
+        "model_source_sha256": _sha256(_model_source(config)),
+        "base_model_source_sha256": _sha256(REPO / "models" / "gap_slot_emo.py") if candidate else None,
+        "candidate_data_source_sha256": _sha256(REPO / "problem2" / "candidate_data.py") if candidate else None,
         "data_source_sha256": _sha256(REPO / "problem2" / "data.py"),
         "runner_source_sha256": _sha256(Path(__file__)),
         "train_n": len(splits["train"]), "valid_n": len(splits["valid"]),
@@ -183,25 +218,41 @@ def train(args: argparse.Namespace) -> None:
         model.train()
         train_data.set_epoch(epoch)
         total_loss = 0.0
+        total_cls = total_reg = total_teacher = 0.0
         total_n = 0
         for batch in _loader(train_data, config["batch_size"], shuffle=True, seed=seed + epoch):
             optimizer.zero_grad(set_to_none=True)
             result = model(**_input(batch, device))
             label = batch["label"].to(device)
             intensity = batch["intensity"].to(device)
-            loss = criterion_cls(result["logits"], label) + config["regression_weight"] * criterion_reg(result["regression"], intensity)
+            cls_loss = criterion_cls(result["logits"], label)
+            reg_loss = criterion_reg(result["regression"], intensity)
+            if teacher_weight:
+                teacher_loss = model.distillation_loss(
+                    result["text_features"], batch["teacher_text"].to(device),
+                    batch["observed"][:, 0].to(device),
+                )
+            else:
+                teacher_loss = cls_loss.new_zeros(())
+            loss = cls_loss + config["regression_weight"] * reg_loss + teacher_weight * teacher_loss
             if not torch.isfinite(loss):
                 raise FloatingPointError(f"nonfinite training loss at epoch {epoch}")
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), config["gradient_clip"], error_if_nonfinite=True)
             optimizer.step()
             total_loss += loss.item() * len(label)
+            total_cls += cls_loss.item() * len(label)
+            total_reg += reg_loss.item() * len(label)
+            total_teacher += teacher_loss.item() * len(label)
             total_n += len(label)
         clean = _metrics(_predict(model, _loader(valid_clean, config["batch_size"]), device))
         mixed = _metrics(_predict(model, _loader(valid_mixed, config["batch_size"]), device))
         # Fixed before training: both clean and local-gap validation matter.
         score = (clean["f1_macro"] + mixed["f1_macro"]) / 2 - 0.1 * (clean["mae"] + mixed["mae"]) / 2
-        row = {"epoch": epoch, "train_loss": total_loss / total_n, "selection_score": score, "clean": clean, "mixed": mixed}
+        row = {"epoch": epoch, "train_loss": total_loss / total_n,
+               "train_cls_loss": total_cls / total_n, "train_reg_loss": total_reg / total_n,
+               "train_teacher_loss": total_teacher / total_n,
+               "selection_score": score, "clean": clean, "mixed": mixed}
         history.append(row)
         _json(out / "history.json", history)
         print(json.dumps(row, ensure_ascii=False), flush=True)
@@ -225,8 +276,14 @@ def _checkpoint(path: Path, device: torch.device, *, allow_smoke: bool = False) 
     if state.get("provenance", {}).get("run_kind") == "smoke_only_not_for_submission" and not allow_smoke:
         raise ValueError("smoke checkpoint is for pipeline checks only; run the smoke command, not official inference")
     expected = state.get("provenance", {}).get("model_source_sha256")
-    if expected and expected != _sha256(REPO / "models" / "gap_slot_emo.py"):
+    if expected and expected != _sha256(_model_source(state["config"])):
         raise RuntimeError("model source differs from the saved checkpoint; use the recorded model version")
+    expected_base = state.get("provenance", {}).get("base_model_source_sha256")
+    if expected_base and expected_base != _sha256(REPO / "models" / "gap_slot_emo.py"):
+        raise RuntimeError("base model source differs from the saved candidate checkpoint")
+    expected_candidate_data = state.get("provenance", {}).get("candidate_data_source_sha256")
+    if expected_candidate_data and expected_candidate_data != _sha256(REPO / "problem2" / "candidate_data.py"):
+        raise RuntimeError("candidate teacher preprocessing differs from the saved checkpoint")
     expected_data = state.get("provenance", {}).get("data_source_sha256")
     if expected_data and expected_data != _sha256(REPO / "problem2" / "data.py"):
         raise RuntimeError("preprocessing differs from the checkpoint; use the recorded data.py")
